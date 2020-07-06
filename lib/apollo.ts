@@ -34,7 +34,7 @@ function createApolloClient(context?: ResolverContext) {
 
 export function initializeApollo(
 	// (a)
-	initialState: any | null,
+	initialState: any = null,
 	context?: ResolverContext
 ) {
 	const _apolloClient = apolloClient ?? createApolloClient(context);
