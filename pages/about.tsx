@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { NextPage } from "next";
 
-export default function About() {
+export default function About({}: NextPage) {
 	return (
 		<div>
 			Welcome to the about page. Go to the{" "}

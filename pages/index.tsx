@@ -1,9 +1,9 @@
-import { GetStaticProps } from "next";
+import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
 
-const Index = () => {
+const Index: NextPage = () => {
 	const { data } = useViewerQuery();
 	const { viewer } = data!;
 
