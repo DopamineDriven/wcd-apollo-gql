@@ -9,7 +9,9 @@ const Index = () => {
 
 	return (
 		<div>
-			Signed in as {viewer.name} and you're {viewer.status} go to the{" "}
+			Signed in as {viewer.name} and you're {viewer.status}! 
+            <br />
+            go to the{" "}
 			<Link href="/about">
 				<a>about</a>
 			</Link>{" "}
