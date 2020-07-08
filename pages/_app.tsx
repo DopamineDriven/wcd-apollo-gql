@@ -10,40 +10,29 @@ import { GlobalStyle, theme } from "../global";
 import "antd/dist/antd.css";
 
 export function reportWebVitals(metric: any) {
-	console.log(metric)
+	console.log(metric);
 }
 
 export default function App({ Component, pageProps }: AppProps) {
 	const apolloClient = useApollo(pageProps.initialApolloState);
 	return (
 		<ApolloProvider client={apolloClient}>
-		<ThemeProvider theme={theme}>
-			<GlobalStyle theme={theme} />
-			<Head>
-				
-			</Head>
-			<Head>
-				<title>Next.ts</title>
-			</Head>
-			<Header />
-			<main className="main">
-				<Center>
-					<Component {...pageProps} />
-				</Center>
-			</main>
-			<Footer />
-		</ThemeProvider>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle theme={theme} />
+				<Head>
+					 
+				</Head>
+				<Head>
+					<title>Next.ts</title>
+				</Head>
+				<Header />
+				<main className="main">
+					<Center>
+						<Component {...pageProps} />
+					</Center>
+				</main>
+				<Footer />
+			</ThemeProvider>
 		</ApolloProvider>
-	)
+	);
 }
-
-
-// export default function App({ Component, pageProps }: AppProps) {
-// 	const apolloClient = useApollo(pageProps.initialApolloState);
-
-// 	return (
-// 		<ApolloProvider client={apolloClient}>
-// 			<Component {...pageProps} />
-// 		</ApolloProvider>
-// 	);
-// }

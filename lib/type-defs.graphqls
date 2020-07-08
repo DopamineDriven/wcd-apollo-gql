@@ -1,7 +1,11 @@
 type User {
 	id: ID!
 	name: String!
-	status: String!
+	role: String!
+	email: String!
+	image: String!
+	source: String!
+	content: String!
 }
 
 type Query {

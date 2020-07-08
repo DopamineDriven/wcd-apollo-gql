@@ -38,7 +38,7 @@ const NotFound: FC & NextPage = () => {
 			<MainSOS>404</MainSOS>
 			<SubSOS>That&apos;s an error</SubSOS>
 			<Link href="/">
-				<LinkSOS>Return Home</LinkSOS>
+				<LinkSOS>&rarr;&nbsp;Home&nbsp;&larr;</LinkSOS>
 			</Link>
 		</ContainerSOS>
 	);

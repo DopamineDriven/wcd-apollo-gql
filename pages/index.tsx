@@ -9,7 +9,7 @@ const Index: NextPage = () => {
 
 	return (
 		<div>
-			Signed in as {viewer.name} and you're {viewer.status}! 
+			Signed in as {viewer.name} and you're {viewer.role}! 
             <br />
             go to the{" "}
 			<Link href="/about">
