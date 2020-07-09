@@ -10,7 +10,7 @@ export type ResolverContext = {
 	res?: ServerResponse;
 };
 
-function createIsomorphLink(context: ResolverContext = {}) {
+export function createIsomorphLink(context: ResolverContext = {}) {
 	if (typeof window === "undefined") {
 		const { SchemaLink } = require("apollo-link-schema");
 		const { schema } = require("./schema");

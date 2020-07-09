@@ -1,5 +1,5 @@
 query Viewer {
-    viewer {
+    viewers {
         id
         name
         role
