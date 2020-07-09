@@ -5,7 +5,7 @@ const apolloServer = new ApolloServer({ schema });
 
 export const config = {
 	api: {
-		bodyParser: true
+		bodyParser: false
 	}
 };
 

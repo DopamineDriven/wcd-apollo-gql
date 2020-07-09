@@ -1,6 +1,6 @@
 import { User } from "./viewer.graphql";
 
-export const users: User[] = [
+const users: User[] = [
 	{
 		id: "1",
 		name: "Andrew Ross",
@@ -35,3 +35,5 @@ export const users: User[] = [
 			'<p>Currently working on a new discord bot -- "WAFFLES". Everyone is going to want a piece of that syrupy, flaky, Yonglicious good-good.</p>'
 	}
 ];
+
+export default users;

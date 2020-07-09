@@ -121,16 +121,17 @@ const Section: FC<IndexProps> = ({ users }) => {
 					<PostCard key={user.id} user={user} />;
 				})}
 			</GridSection>
-			<LinkSection href="/about">
+			<Link href="/about">
 				<a>about</a>
-			</LinkSection>{" "}
+			</Link>{" "}
 		</section>
 	);
 };
 
 const Index: NextPage = () => {
 	const { data, loading, error } = useViewerQuery();
-	const { viewers } = data!;
+    if (data) {
+    const { viewers } = data!;
 
 	return error ? (
 		<div>oops! error</div>
@@ -145,7 +146,9 @@ const Index: NextPage = () => {
 			</Link>{" "}
 			page.
 		</div>
-	);
+    );
+    }
+    return <div></div>
 };
 
 export async function getStaticProps({}: GetStaticProps) {
