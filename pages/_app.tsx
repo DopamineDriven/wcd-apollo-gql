@@ -8,6 +8,7 @@ import { Footer, Header } from "../components";
 import { Center } from "../components/Style";
 import { GlobalStyle, theme } from "../global";
 import "antd/dist/antd.css";
+import "../global/index.css"
 
 export function reportWebVitals(metric: any) {
 	console.log(metric);

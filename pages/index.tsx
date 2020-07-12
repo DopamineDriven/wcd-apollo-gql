@@ -4,9 +4,7 @@ import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
 import { User } from "../lib/viewer.graphql";
-import { Card } from "antd";
-
-
+import { Card, Col, Row } from "antd";
 interface Props {
 	user: User;
 }
@@ -21,33 +19,6 @@ const gridStyle = {
 	width: "33.33%",
 	textAlign: "justify"
 };
-
-// const PostCard: FC<Props> = ({ user }) => {
-// 	return (
-// 		<CardPostCard>
-// 			<FigurePostCard>
-// 				<img alt={user.name} src={user.image} />
-// 			</FigurePostCard>
-// 			<TitlePostCard>{user.name}</TitlePostCard>
-// 			<LeadPostCard>{user.role}</LeadPostCard>
-// 		</CardPostCard>
-// 	);
-// };
-
-// const Section: FC<IndexProps> = ({ users }) => {
-// 	return (
-// 		<section>
-// 			<GridSection>
-// 				{users.map((user) => {
-// 					<PostCard key={user.id} user={user} />;
-// 				})}
-// 			</GridSection>
-// 			<Link href="/about">
-// 				<a>about</a>
-// 			</Link>{" "}
-// 		</section>
-// 	);
-// };
 
 export async function getStaticProps({}: GetStaticProps) {
 	const apolloClient = initializeApollo();
@@ -70,7 +41,11 @@ const Index: NextPage = () => {
 		console.log(viewers);
 
 		const items = viewers.map((viewer) => (
-			<Card.Grid key={viewer.id} hoverable={true} style={gridStyle}>
+			<Card.Grid
+				key={viewer.id}
+				hoverable={true}
+				style={{ width: "33.33%", textAlign: "justify" }}
+			>
 				{viewer.name}—{viewer.role}
 				<br />
 			</Card.Grid>
@@ -81,7 +56,7 @@ const Index: NextPage = () => {
 		) : loading ? (
 			<div>loading...</div>
 		) : (
-			<div>
+			<div className="user-card">
 				<ul>{items}</ul>
 				go to the{" "}
 				<Link href="/about">

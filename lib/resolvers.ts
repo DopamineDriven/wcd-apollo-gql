@@ -12,7 +12,7 @@ const Query: Required<QueryResolvers<ResolverContext>> = {
 		users.find((user) => {
 			user.id === args;
 		});
-		console.log(users)
+		console.log(users);
 		return users;
 	}
 };
