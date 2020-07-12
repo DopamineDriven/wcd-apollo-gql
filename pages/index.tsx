@@ -52,20 +52,66 @@ const Index: NextPage = () => {
 		console.log(viewers);
 
 		const items = viewers.map(viewer => (
-			<Card.Grid key={viewer.id} hoverable={true} className="user-card-grid">
-				<Title level={4} className="user-details">{viewer.name}</Title>
-				{viewer.name}—{viewer.role}
+			<Card
+				key={viewer.id}
+				hoverable={true}
+				className="user-card-grid"
+				cover={
+					<Avatar
+						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
+						icon={UserOutlined}
+						alt={`nextjs and JAMstack`}
+						className="user-avatar"
+						shape="square"
+					/>
+				}
+				actions={[
+					<GithubOutlined key="github" href={viewer.github} target="__blank" />,
+					<LinkedinOutlined
+						key="linkedin"
+						href={viewer.linkedin}
+						target="__blank"
+					/>,
+					<TwitterOutlined
+						key="twitter"
+						href={viewer.twitter}
+						target="__blank"
+					/>
+				]}
+			>
+				<Title level={4} className="user-details">
+					<Text strong>
+						{viewer.name}&nbsp;&nbsp;&nbsp;&nbsp;{viewer.role}
+					</Text>
+				</Title>
+				<Divider />
 				<div className="user-avatar">
 					<Avatar
 						size={150}
-						src={viewer.image}
+						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
 						icon={UserOutlined}
 						className="user-avatar"
 						shape="square"
 					/>
 				</div>
 				<Divider />
-			</Card.Grid>
+				<Meta
+					title={viewer.email}
+					description={
+						<Link href="/about">
+							<a>About</a>
+						</Link>
+					}
+					avatar={
+						<Avatar
+							src={viewer.image}
+							icon={UserOutlined}
+							className="user-avatar"
+							shape="circle"
+						/>
+					}
+				/>
+			</Card>
 		));
 
 		return error ? (
