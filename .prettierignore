@@ -10,3 +10,4 @@ type-defs.graphqls
 viewer.graphql
 .vercel
 build
+public
