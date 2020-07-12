@@ -1,20 +1,24 @@
 * body {
-	background-color: #ffffff;
+    background-color: #ffffff;
+    align-content: center;
+    align-items: center;
 }
 
 .user-avatar {
 	text-align: center;
-	vertical-align: middle;
+    vertical-align: middle;
+    border: double #000000 2px;
 }
 
 .user-card {
 	margin: 0 auto;
+	width: "33.33%";
 }
 
 .user-card-grid {
 	width: "33.33%";
-    text-align: justify;
-    margin-bottom: 20px;
+	text-align: justify;
+    margin: 20px;
 }
 
 .user-details {
@@ -42,7 +46,8 @@
 }
 
 .affix-header {
-	z-index: 99;
+    z-index: 99;
+    padding: 20px;
 }
 
 .app-layout {
@@ -51,8 +56,13 @@
 	min-height: 100vh;
 }
 
-.header {
-    padding-bottom: 20px;
-    font-size: large;
-    margin-bottom: 20px;
-}
+/* .ant-card-actions {
+    background-color: #000000;
+} */
+
+
+/* .header {
+	padding-bottom: 20px;
+	font-size: large;
+	margin-bottom: 20px;
+} */

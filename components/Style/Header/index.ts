@@ -18,6 +18,7 @@ export const LogoHeader = styled.h1`
     font-family: ${(p) => p.theme.fonts.accent};
     padding-bottom: 15px;
     margin-bottom: 20px;
+    display: flex;
 
     a {
         text-decoration: none;

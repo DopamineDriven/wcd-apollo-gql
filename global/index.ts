@@ -3,7 +3,7 @@ import { createGlobalStyle, ThemeProps } from "styled-components";
 export const theme = {
 	fonts: {
 		basic: "Helvetica, sans-serif",
-		accent: '"Great Vibes", cursive'
+        accent: '"Great Vibes", cursive'
 	},
 	colors: {
 		orange: "#f4ae40",

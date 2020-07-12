@@ -3,14 +3,14 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
-import { Avatar, Card, Divider, Layout, Spin, Typography } from "antd";
+import { Avatar, Button, Card, Divider, Layout, Spin, Typography } from "antd";
 import {
 	GithubOutlined,
 	LinkedinOutlined,
 	TwitterOutlined,
 	UserOutlined
 } from "@ant-design/icons";
-import { ErrorBanner } from "../utils";
+import { ErrorBanner, iconColor } from "../utils";
 import { PageSkeleton } from "../components";
 
 const { Meta } = Card;
@@ -41,6 +41,7 @@ const Index: NextPage = () => {
 			<Card
 				key={viewer.id}
 				hoverable={true}
+				style={{ display: "inline-block", width: "30%" }}
 				className="user-card-grid"
 				cover={
 					<img
@@ -50,53 +51,56 @@ const Index: NextPage = () => {
 					/>
 				}
 				actions={[
-					<GithubOutlined key="github" href={viewer.github} target="__blank" />,
-					<LinkedinOutlined
-						key="linkedin"
-						href={viewer.linkedin}
-						target="__blank"
-					/>,
-					<TwitterOutlined
-						key="twitter"
-						href={viewer.twitter}
-						target="__blank"
-					/>
+					<Button href={viewer.github} target="__blank">
+						<GithubOutlined key="github" color={iconColor} />
+					</Button>,
+					<Button href={viewer.linkedin} target="__blank">
+						<LinkedinOutlined key="linkedin" color={iconColor} />
+					</Button>,
+					<Button target="__blank" href={viewer.twitter}>
+						<TwitterOutlined key="twitter" color={iconColor} />
+					</Button>
 				]}
 			>
 				<Title level={4} className="user-details">
-					<Text strong>
-						{viewer.name}&nbsp;&nbsp;&nbsp;&nbsp;{viewer.role}
+					<Text strong style={{ fontSize: "30px" }}>
+						{viewer.name}—{viewer.role}
 					</Text>
 				</Title>
-				<Paragraph>
-					<Text>{viewer.content}</Text>
-				</Paragraph>
+				<Divider />
 				{/* <div className="user-avatar">
 					<Avatar
 						size={150}
-						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
+						src={viewer.image}
 						icon={UserOutlined}
 						className="user-avatar"
 						shape="square"
 					/>
 				</div> */}
 				<Meta
-					title={viewer.email}
 					description={
-						<Link href="/about">
-							<a>About</a>
-						</Link>
+						<Button style={{ float: "right" }} size="large">
+							<Link href="/about">
+								<a>About</a>
+							</Link>
+						</Button>
 					}
 					avatar={
 						<Avatar
 							src={viewer.image}
-							size={150}
+							size={200}
 							icon={UserOutlined}
 							className="user-avatar"
 							shape="circle"
 						/>
 					}
 				/>
+				<Divider />
+				<Paragraph>
+					<Text strong style={{ fontSize: "larger" }}>
+						<em>{viewer.content}</em>
+					</Text>
+				</Paragraph>
 			</Card>
 		));
 
@@ -113,7 +117,7 @@ const Index: NextPage = () => {
 				</div>
 			</Content>
 		) : (
-			<Content className="user-card">
+			<Content className="user-card" style={{ display: "inline" }}>
 				<ul>{items}</ul>
 				<Divider />
 				go to the{" "}

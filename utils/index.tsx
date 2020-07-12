@@ -40,3 +40,12 @@ export const displaySuccessNotification = (
 export const displayErrorMessage = (error: string) => {
 	return message.error(error);
 };
+
+// blizzard blue
+export const iconColor = "#b3ddf2";
+
+// red
+// #ff0000
+
+// white
+// #ffffff
