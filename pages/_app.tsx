@@ -7,8 +7,9 @@ import { ThemeProvider } from "styled-components";
 import { Footer, Header } from "../components";
 import { Center } from "../components/Style";
 import { GlobalStyle, theme } from "../global";
+import { Affix, Layout } from "antd";
 import "antd/dist/antd.css";
-import "../global/index.css"
+import "../global/index.css";
 
 export function reportWebVitals(metric: any) {
 	console.log(metric);
@@ -17,19 +18,23 @@ export function reportWebVitals(metric: any) {
 export default function App({ Component, pageProps }: AppProps) {
 	const apolloClient = useApollo(pageProps.initialApolloState);
 	return (
-		<ApolloProvider client={apolloClient} >
+		<ApolloProvider client={apolloClient}>
 			<ThemeProvider theme={theme}>
 				<GlobalStyle theme={theme} />
 				<Head>
 					<title>Next.ts</title>
 				</Head>
-				<Header />
-				<main className="main">
-					<Center>
-						<Component {...pageProps} />
-					</Center>
-				</main>
-				<Footer />
+				<Layout className="app-layout">
+					<Affix offsetTop={0} className="affix-header">
+						<Header />
+					</Affix>
+					<main className="main">
+						<Center>
+							<Component {...pageProps} />
+						</Center>
+					</main>
+					<Footer />
+				</Layout>
 			</ThemeProvider>
 		</ApolloProvider>
 	);

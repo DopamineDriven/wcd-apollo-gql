@@ -17,8 +17,7 @@ export default class MyDocument extends Document {
 		try {
 			ctx.renderPage = () =>
 				originalRenderPage({
-					enhanceApp: (App) => (props) =>
-						sheet.collectStyles(<App {...props} />)
+					enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);
@@ -46,7 +45,7 @@ export default class MyDocument extends Document {
 						content="The Next generation of a news feed"
 					/>
 					<link
-						href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+						href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
 						rel="stylesheet"
 					/>
 					<link rel="shortcut icon" href="/favicon.ico" />

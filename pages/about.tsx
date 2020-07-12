@@ -58,7 +58,7 @@ export const ContentPostBody = styled.div`
 `;
 
 export const MetaPostBody = styled.footer`
-	color: ${(p) => p.theme.colors.gray};
+	color: ${p => p.theme.colors.gray};
 
 	& > * {
 		margin-right: 0.3em;
@@ -92,7 +92,7 @@ const About: FC<AboutProps & NextPage> = ({ user }) => {
 					<a>Home</a>
 				</Link>{" "}
 				<span>&middot;</span>
-				<a href={user.source} target="__blank">
+				<a href={"./"} target="__blank">
 					Source
 				</a>
 			</MetaPostBody>

@@ -1,7 +1,51 @@
 * body {
-  background-color: #ffffff;
+	background-color: #ffffff;
+}
+
+.user-avatar {
+	text-align: center;
+	vertical-align: middle;
 }
 
 .user-card {
-  margin: 0 auto;
+	margin: 0 auto;
+}
+
+.user-card-grid {
+	width: "33.33%";
+	text-align: justify;
+}
+
+.user-details {
+	margin-bottom: 20px;
+}
+
+.page-skeleton {
+	padding-bottom: 40px;
+}
+
+.error-banner {
+	position: fixed;
+	width: 100%;
+	top: 64px;
+	left: 0;
+	z-index: 99;
+}
+
+.spin-section {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.affix-header {
+	z-index: 99;
+}
+
+.app-layout {
+	position: relative;
+	background: #ffffff;
+	min-height: 100vh;
 }
