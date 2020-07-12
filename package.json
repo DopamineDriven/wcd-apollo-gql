@@ -50,6 +50,7 @@
     "@types/styled-components": "^5.1.0",
     "dotenv": "^8.2.0",
     "graphql-let": "^0.10.0",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.6"
   }
 }

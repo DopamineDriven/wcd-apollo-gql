@@ -5,7 +5,9 @@ query Viewer {
         role
         email
         image
-        source
         content
+        github
+        twitter
+        linkedin
     }
 }

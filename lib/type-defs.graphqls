@@ -6,8 +6,10 @@ type User {
 	role: String!
 	email: String!
 	image: String!
-	source: String!
 	content: String!
+	github: String!
+	twitter: String!
+	linkedin: String!
 }
 
 type Query {

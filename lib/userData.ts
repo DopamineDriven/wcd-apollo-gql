@@ -6,9 +6,11 @@ const users: User[] = [
 		name: "Andrew Ross",
 		role: "CTO",
 		email: "andrew@windycitydevs.io",
+		github: "https://github.com/DopamineDriven",
+		twitter: "https://twitter.com/Dopamine_Driven",
+		linkedin: "https://www.linkedin.com/in/asross/",
 		image:
-			"https://res.cloudinary.com/asross311/image/upload/v1592831978/ASR_Assets/cropped-a_nqaem7.png",
-		source: "https://github.com/DopamineDriven",
+		"https://res.cloudinary.com/asross311/image/upload/v1592831978/ASR_Assets/cropped-a_nqaem7.png",
 		content:
 			'<p>First and foremost, TypeScript puts the super in superset, especially in a team environment. State management in React can be cumbersome, which is why I consider GraphQL and Apollo to be the dynamic duo. That said, Redux and Recoil each have their use-cases as well.</p><p>As far as primary prebuilts are concerened, the "Next.js" framework is top-notch. It removes the otherwise tedious process of manually configuring Webpack to support a server-side rendering app from the equation. It saves time, simplifies optimization, and delivers blazing fast performance to ultimately enhance end-user experience.</p><p> "The mechanic that would perfect his work must first sharpen his tools." - <em>Confucius</em></p><br />'
 	},
@@ -17,7 +19,9 @@ const users: User[] = [
 		name: "Joe Shields",
 		role: "CEO",
 		email: "joe@windycitydevs.io",
-		source: "https://github.com/JShields30",
+		github: "https://github.com/JShields30",
+		twitter: "https://twitter.com/JShields312",
+		linkedin: "https://www.linkedin.com/in/jshields90/",
 		image:
 			"https://res.cloudinary.com/asross311/image/upload/v1592801826/ASR_Assets/Joe_vlnzpm.jpg",
 		content:
@@ -28,7 +32,9 @@ const users: User[] = [
 		name: "Yong Lee",
 		role: "COO",
 		email: "yong@windycitydevs.io",
-		source: "https://github.com/yhlee-dho",
+		github: "https://github.com/yhlee-dho",
+		twitter: "https://twitter.com/YongLee08380800",
+		linkedin: "https://www.linkedin.com/in/yong-lee-a16430193/",
 		image:
 			"https://res.cloudinary.com/asross311/image/upload/v1594134267/ASR_Assets/Ghengis_Yong_epwjh8.png",
 		content:

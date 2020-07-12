@@ -12,5 +12,7 @@ export interface Post {
     lead: string;
     content: string;
     image: UriString;
-    source: UriString;
+    github: UriString;
+    twitter: UriString;
+    linkedin: UriString;
 }
