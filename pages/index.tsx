@@ -3,16 +3,7 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
-import {
-	Avatar,
-	Card,
-	Col,
-	Divider,
-	Layout,
-	Row,
-	Spin,
-	Typography
-} from "antd";
+import { Avatar, Card, Divider, Layout, Spin, Typography } from "antd";
 import {
 	GithubOutlined,
 	LinkedinOutlined,
@@ -25,11 +16,6 @@ import { PageSkeleton } from "../components";
 const { Meta } = Card;
 const { Content } = Layout;
 const { Paragraph, Text, Title } = Typography;
-
-const gridStyle = {
-	width: "33.33%",
-	textAlign: "justify"
-};
 
 export async function getStaticProps({}: GetStaticProps) {
 	const apolloClient = initializeApollo();
@@ -84,8 +70,10 @@ const Index: NextPage = () => {
 						{viewer.name}&nbsp;&nbsp;&nbsp;&nbsp;{viewer.role}
 					</Text>
 				</Title>
-				<Divider />
-				<div className="user-avatar">
+				<Paragraph>
+					<Text>{viewer.content}</Text>
+				</Paragraph>
+				{/* <div className="user-avatar">
 					<Avatar
 						size={150}
 						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
@@ -93,8 +81,7 @@ const Index: NextPage = () => {
 						className="user-avatar"
 						shape="square"
 					/>
-				</div>
-				<Divider />
+				</div> */}
 				<Meta
 					title={viewer.email}
 					description={
@@ -129,6 +116,7 @@ const Index: NextPage = () => {
 		) : (
 			<Content className="user-card">
 				<ul>{items}</ul>
+				<Divider />
 				go to the{" "}
 				<Link href="/about">
 					<a>about</a>
