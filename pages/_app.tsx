@@ -16,12 +16,9 @@ export function reportWebVitals(metric: any) {
 export default function App({ Component, pageProps }: AppProps) {
 	const apolloClient = useApollo(pageProps.initialApolloState);
 	return (
-		<ApolloProvider client={apolloClient}>
+		<ApolloProvider client={apolloClient} >
 			<ThemeProvider theme={theme}>
 				<GlobalStyle theme={theme} />
-				<Head>
-					 
-				</Head>
 				<Head>
 					<title>Next.ts</title>
 				</Head>

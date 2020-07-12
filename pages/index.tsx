@@ -130,25 +130,26 @@ const Section: FC<IndexProps> = ({ users }) => {
 
 const Index: NextPage = () => {
 	const { data, loading, error } = useViewerQuery();
-    if (data) {
-    const { viewers } = data!;
+	if (data) {
+		const { viewers } = data!;
 
-	return error ? (
-		<div>oops! error</div>
-	) : loading ? (
-		<div>loading...</div>
-	) : (
-		<div>
-			<Section users={viewers} />
-			go to the{" "}
-			<Link href="/about">
-				<a>about</a>
-			</Link>{" "}
-			page.
-		</div>
-    );
-    }
-    return <div></div>
+		return error ? (
+			<div>oops! error</div>
+		) : loading ? (
+			<div>loading...</div>
+		) : (
+			<div>
+
+				<Section users={viewers} />
+				go to the{" "}
+				<Link href="/about">
+					<a>about</a>
+				</Link>{" "}
+				page.
+			</div>
+		);
+	}
+	return <div></div>;
 };
 
 export async function getStaticProps({}: GetStaticProps) {
@@ -165,4 +166,4 @@ export async function getStaticProps({}: GetStaticProps) {
 	};
 }
 
-export default (Index);
+export default Index;

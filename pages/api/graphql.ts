@@ -5,8 +5,10 @@ const apolloServer = new ApolloServer({ schema });
 
 export const config = {
 	api: {
-		bodyParser: false
+		bodyParser: true
 	}
 };
 
-export default apolloServer.createHandler({ path: "/api/graphql" });
+const handler = apolloServer.createHandler({ path: "/api/graphql" });
+
+export default handler;
