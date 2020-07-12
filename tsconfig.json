@@ -7,8 +7,8 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"lib": ["DOM", "ES2017"],
-		"module": "ESNext",
-		"moduleResolution": "node",
+		"module": "CommonJS",
+		"moduleResolution": "Node",
 		"noEmit": true,
 		"noFallthroughCasesInSwitch": true,
 		"noUnusedLocals": true,
@@ -16,7 +16,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "ESNext"
+		"target": "ES2017"
 	},
 	"exclude": ["node_modules"],
 	"include": ["**/*.ts", "**/*.tsx"]

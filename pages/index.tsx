@@ -3,15 +3,8 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
-import { User } from "../lib/viewer.graphql";
-import { Card, Col, Row } from "antd";
-interface Props {
-	user: User;
-}
+import { Card, Col, Divider, Row } from "antd";
 
-interface IndexProps {
-	users: User[];
-}
 
 const { Meta } = Card;
 
