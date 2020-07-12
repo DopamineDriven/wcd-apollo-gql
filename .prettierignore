@@ -1,0 +1,12 @@
+# Ignore Artifacts
+node_modules
+.next
+_next
+dist
+README.md
+.graphql-let.yml
+yarn.lock
+type-defs.graphqls
+viewer.graphql
+.vercel
+build
