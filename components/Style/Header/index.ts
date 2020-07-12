@@ -14,9 +14,10 @@ export const ContainerHeader = styled.header`
 `;
 
 export const LogoHeader = styled.h1`
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: ${(p) => p.theme.fonts.accent};
     padding-bottom: 15px;
+    margin-bottom: 20px;
 
     a {
         text-decoration: none;

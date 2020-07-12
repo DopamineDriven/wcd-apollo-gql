@@ -43,12 +43,10 @@ const Index: NextPage = () => {
 				hoverable={true}
 				className="user-card-grid"
 				cover={
-					<Avatar
+					<img
 						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
-						icon={UserOutlined}
 						alt={`nextjs and JAMstack`}
 						className="user-avatar"
-						shape="square"
 					/>
 				}
 				actions={[
@@ -92,6 +90,7 @@ const Index: NextPage = () => {
 					avatar={
 						<Avatar
 							src={viewer.image}
+							size={150}
 							icon={UserOutlined}
 							className="user-avatar"
 							shape="circle"

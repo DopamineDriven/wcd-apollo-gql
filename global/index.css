@@ -13,7 +13,8 @@
 
 .user-card-grid {
 	width: "33.33%";
-	text-align: justify;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
 .user-details {
@@ -48,4 +49,10 @@
 	position: relative;
 	background: #ffffff;
 	min-height: 100vh;
+}
+
+.header {
+    padding-bottom: 20px;
+    font-size: large;
+    margin-bottom: 20px;
 }

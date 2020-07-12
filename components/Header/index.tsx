@@ -6,7 +6,7 @@ export const Header: FC = () => {
 	return (
 		<ContainerHeader>
 			<Center>
-				<LogoHeader>
+				<LogoHeader className="header">
 					<Link href="/">
 						<a>Windy City Devs</a>
 					</Link>
