@@ -29,6 +29,10 @@
 	padding-bottom: 40px;
 }
 
+.header-fixed {
+	
+}
+
 .error-banner {
 	position: fixed;
 	width: 100%;
