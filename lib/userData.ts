@@ -12,7 +12,8 @@ const users: User[] = [
 		image:
 			"https://res.cloudinary.com/asross311/image/upload/v1592831978/ASR_Assets/cropped-a_nqaem7.png",
 		content:
-			'"The mechanic that would perfect his work must first sharpen his tools." - Confucius'
+			'"The mechanic that would perfect his work must first sharpen his tools." - Confucius',
+		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png"
 	},
 	{
 		id: "2",
@@ -25,7 +26,8 @@ const users: User[] = [
 		image:
 			"https://res.cloudinary.com/asross311/image/upload/v1592801826/ASR_Assets/Joe_vlnzpm.jpg",
 		content:
-			"JAMstack, Baby JAMstack! JAMstack, Baby JAMstack! OooooooOOOooo!"
+			"JAMstack, Baby JAMstack! JAMstack, Baby JAMstack! OooooooOOOooo!",
+		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594605276/ASR_Assets/Peter-Lik-Chicago_zamhq1.webp"
 	},
 	{
 		id: "3",
@@ -38,7 +40,8 @@ const users: User[] = [
 		image:
 			"https://res.cloudinary.com/asross311/image/upload/v1594134267/ASR_Assets/Ghengis_Yong_epwjh8.png",
 		content:
-			"My milkshake brings all the 🐜🐜🐜 to the yard and they are like, BUILD DIG KILL"
+			"My milkshake brings all the 🐜🐜🐜 to the yard and they are like, BUILD DIG KILL",
+		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594605138/ASR_Assets/Banner-GreatBarrierReef_i1d1zy.jpg"
 	}
 ];
 

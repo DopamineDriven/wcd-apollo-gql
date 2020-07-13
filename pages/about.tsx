@@ -3,8 +3,8 @@ import Link from "next/link";
 import { NextPage } from "next";
 import { User } from "../lib/viewer.graphql";
 import styled from "styled-components";
-import { Avatar } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+// import { Avatar } from "antd";
+// import { UserOutlined } from "@ant-design/icons";
 
 export const TitlePostBody = styled.h2`
 	font-size: 2.8rem;
@@ -69,10 +69,10 @@ interface AboutProps {
 	user: User;
 }
 
-const About: FC<AboutProps & NextPage> = ({ user }) => {
+const About: FC<AboutProps & NextPage> = () => {
 	return (
 		<div>
-			<TitlePostBody>{user.name}</TitlePostBody>
+			{/* <TitlePostBody>{user.name}</TitlePostBody>
 			<FigurePostBody>
 				<Avatar
 					src={user.image}
@@ -87,15 +87,15 @@ const About: FC<AboutProps & NextPage> = ({ user }) => {
 			<ContentPostBody dangerouslySetInnerHTML={{ __html: user.content }} />
 			<MetaPostBody>
 				<span>{user.email}</span>
-				<span>&middot;</span>
-				<Link href="/">
-					<a>Home</a>
-				</Link>{" "}
-				<span>&middot;</span>
-				<a href={"./"} target="__blank">
-					Source
-				</a>
-			</MetaPostBody>
+				<span>&middot;</span> */}
+			<Link href="/">
+				<a>Home</a>
+			</Link>{" "}
+			<span>&middot;</span>
+			<a href={"./"} target="__blank">
+				Source
+			</a>
+			{/* </MetaPostBody> */}
 		</div>
 	);
 };

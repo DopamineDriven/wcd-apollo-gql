@@ -10,6 +10,7 @@ type User {
 	github: String!
 	twitter: String!
 	linkedin: String!
+	coverphoto: String!
 }
 
 type Query {

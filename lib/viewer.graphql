@@ -9,5 +9,6 @@ query Viewer {
         github
         twitter
         linkedin
+        coverphoto
     }
 }

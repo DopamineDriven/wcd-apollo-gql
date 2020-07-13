@@ -45,7 +45,7 @@ const Index: NextPage = () => {
 				className="user-card-grid"
 				cover={
 					<img
-						src={`https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png`}
+						src={`${viewer.coverphoto}`}
 						alt={`nextjs and JAMstack`}
 						className="user-avatar"
 					/>

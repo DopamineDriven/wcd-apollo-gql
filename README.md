@@ -1,4 +1,6 @@
 # wcd-apollo-gql 🐜🐜🐜BUILD🐜🐜🐜
+
+- optimized images
 ---
 ## add a new remote origin
 ```git
