@@ -4,7 +4,7 @@ import React from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
-import { Footer, Header } from "../components";
+import { Footer, FixedHeader } from "../components";
 import { Center } from "../components/Style";
 import { GlobalStyle, theme } from "../global";
 import { Affix, Layout } from "antd";
@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				</Head>
 				<Layout className="app-layout">
 					<Affix offsetTop={0} className="affix-header">
-						<Header />
+						<FixedHeader />
 					</Affix>
 					<main className="main">
 						<Center>

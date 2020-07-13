@@ -1,13 +1,14 @@
+
 * body {
-    background-color: #ffffff;
-    align-content: center;
-    align-items: center;
+	background-color: #ffffff;
+	align-content: center;
+	align-items: center;
 }
 
 .user-avatar {
 	text-align: center;
-    vertical-align: middle;
-    border: double #000000 2px;
+	vertical-align: middle;
+	border: double #000000 2px;
 }
 
 .user-card {
@@ -18,7 +19,7 @@
 .user-card-grid {
 	width: "33.33%";
 	text-align: justify;
-    margin: 20px;
+	margin: 20px;
 }
 
 .user-details {
@@ -29,8 +30,35 @@
 	padding-bottom: 40px;
 }
 
-.header-fixed {
-	
+.layout-header-fixed {
+	position: fixed;
+	background: #ffffff;
+	box-shadow: 0 2px 8px #f0f1f2;
+	padding: 0;
+	z-index: 1;
+	width: 100%;
+}
+
+.layout-logo-fixed {
+	/* background: rgba(255, 255, 255, 0.2) */
+	display: inline-block;
+	padding: 0 0px;
+}
+
+.layout-logo {
+	width: 124px;
+}
+
+.layout-anchor {
+	font-family: Helvetica, sans-serif;
+	font-size: 4rem;
+	color: #000000;
+	font-style: url(https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap), cursive;
+}
+
+.layout-anchor:hover {
+	color: #eb57a3;
+
 }
 
 .error-banner {
@@ -50,8 +78,8 @@
 }
 
 .affix-header {
-    z-index: 99;
-    padding: 20px;
+	z-index: 99;
+	padding: 20px;
 }
 
 .app-layout {
@@ -63,7 +91,6 @@
 /* .ant-card-actions {
     background-color: #000000;
 } */
-
 
 /* .header {
 	padding-bottom: 20px;
