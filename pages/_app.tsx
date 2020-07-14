@@ -6,7 +6,7 @@ import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { Footer, FixedHeader } from "../components";
 import { Center } from "../components/Style";
-import { GlobalStyle, theme } from "../global";
+import { GlobalStyle, theme } from "../global/index";
 import { Affix, Layout } from "antd";
 import "antd/dist/antd.css";
 import "../global/index.css";

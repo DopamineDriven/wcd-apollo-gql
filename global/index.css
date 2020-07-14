@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Great%20Vibes&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Julius%20Sans%20One&display=swap);
 .body {
 	background: #8e9eab; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
@@ -39,7 +39,19 @@
 	color: #000000;
 	font-weight: bolder;
 	letter-spacing: 0.15em;
-	font-family: 'Julius Sans One';
+	font-family: "Julius Sans One";
+}
+
+.index-anchor:hover {
+	color: #ff0000;
+}
+
+.about-to-home-button {
+	color: #000000;
+	padding: 10px 0 20px;
+	float: right;
+	width: 55%;
+	vertical-align: center;
 }
 
 .user-avatar {
@@ -191,10 +203,18 @@
 
 .app-layout {
 	position: relative;
-	background: #000000;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to bottom,
+		#434343,
+		#000000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#434343,
+		#000000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .ant-card-actions {

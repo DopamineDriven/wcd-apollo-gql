@@ -45,7 +45,7 @@ const About: NextPage = () => {
 	const { data, loading, error } = useViewerQuery();
 	if (data) {
 		const { viewers } = data!;
-		console.log(viewers);
+		// console.log(viewers);
 
 		const items = viewers.map(viewer => (
 			<Card
@@ -148,19 +148,7 @@ const About: NextPage = () => {
 			</Content>
 		) : (
 			<Content className="user-card">
-				{/* <Row gutter={24} justify="space-between">
-					<Col xs={24} lg={14} flex="auto"> */}
-				<ul>{items}</ul>
-				{/* </Col>
-				</Row> */}
-				<div
-					style={{
-						color: "black",
-						height: "100vh",
-						paddingTop: "100px",
-						verticalAlign: "center"
-					}}
-				>
+				<div className="about-to-home-button">
 					<Button
 						className="index-button"
 						type="link"
@@ -172,6 +160,12 @@ const About: NextPage = () => {
 						</Link>{" "}
 					</Button>
 				</div>
+				<Divider />
+				{/* <Row gutter={24} justify="space-between">
+					<Col xs={24} lg={14} flex="auto"> */}
+				<ul>{items}</ul>
+				{/* </Col>
+				</Row> */}
 			</Content>
 		);
 	}
