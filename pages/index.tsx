@@ -3,7 +3,17 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
-import { Avatar, Button, Card, Divider, Layout, Spin, Typography } from "antd";
+import {
+	Avatar,
+	Button,
+	Card,
+	// Col,
+	Divider,
+	Layout,
+	// Row,
+	Spin,
+	Typography
+} from "antd";
 import {
 	GithubOutlined,
 	LinkedinOutlined,
@@ -51,35 +61,55 @@ const Index: NextPage = () => {
 					/>
 				}
 				actions={[
-					<Button href={viewer.github} target="__blank">
-						<GithubOutlined key="github" color={iconColor} />
+					<Button
+						href={viewer.github}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<GithubOutlined
+							key="github"
+							className="user-github-icon"
+							color={iconColor}
+						/>
 					</Button>,
-					<Button href={viewer.linkedin} target="__blank">
-						<LinkedinOutlined key="linkedin" color={iconColor} />
+					<Button
+						href={viewer.linkedin}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<LinkedinOutlined
+							key="linkedin"
+							className="user-linkedin-icon"
+							color={iconColor}
+						/>
 					</Button>,
-					<Button target="__blank" href={viewer.twitter}>
-						<TwitterOutlined key="twitter" color={iconColor} />
+					<Button
+						href={viewer.twitter}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<TwitterOutlined
+							key="twitter"
+							className="user-twitter-icon"
+							color={iconColor}
+						/>
 					</Button>
 				]}
 			>
 				<Title level={4} className="user-details">
-					<Text strong style={{ fontSize: "30px" }}>
+					<Text className="user-name-user-role">
 						{viewer.name}—{viewer.role}
 					</Text>
 				</Title>
 				<Divider />
-				{/* <div className="user-avatar">
-					<Avatar
-						size={150}
-						src={viewer.image}
-						icon={UserOutlined}
-						className="user-avatar"
-						shape="square"
-					/>
-				</div> */}
 				<Meta
 					description={
-						<Button style={{ float: "right" }} size="large">
+						<Button
+							style={{ float: "right" }}
+							size="large"
+							type="link"
+							className="user-button"
+						>
 							<Link href="/about">
 								<a>About</a>
 							</Link>
@@ -97,7 +127,7 @@ const Index: NextPage = () => {
 				/>
 				<Divider />
 				<Paragraph>
-					<Text strong style={{ fontSize: "larger" }}>
+					<Text className="user-content">
 						<em>{viewer.content}</em>
 					</Text>
 				</Paragraph>
@@ -117,8 +147,12 @@ const Index: NextPage = () => {
 				</div>
 			</Content>
 		) : (
-			<Content className="user-card" style={{ display: "inline" }}>
-				<ul>{items}</ul>
+			<Content className="user-card">
+				{/* <Row gutter={24} justify="space-between">
+					<Col xs={24} lg={14} flex="auto"> */}
+					<ul>{items}</ul>
+					{/* </Col>
+				</Row> */}
 				<Divider />
 				go to the{" "}
 				<Link href="/about">

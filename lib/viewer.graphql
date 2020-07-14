@@ -10,5 +10,6 @@ query Viewer {
         twitter
         linkedin
         coverphoto
+        birthday
     }
 }

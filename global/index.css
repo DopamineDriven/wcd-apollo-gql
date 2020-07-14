@@ -1,20 +1,28 @@
-
 * body {
 	background-color: #ffffff;
 	align-content: center;
 	align-items: center;
 }
 
+
 .user-avatar {
 	text-align: center;
 	vertical-align: middle;
-	border: double #000000 2px;
+	/* border: outset #000000 2px; */
 }
 
-.user-card {
+@media (max-width: 75em) {
+	.user-card {
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  display: inline;
+	}
+  }
+
+/* .user-card {
 	margin: 0 auto;
 	width: "33.33%";
-}
+} */
 
 .user-card-grid {
 	width: "33.33%";
@@ -22,8 +30,75 @@
 	margin: 20px;
 }
 
+.user-name-user-role {
+	font-weight: bold;
+	font-size: 30px;
+	color: #000000;
+}
+
+.user-content {
+	font-size: larger;
+	font-weight: "bold";
+	color: #000000;
+}
+
 .user-details {
 	margin-bottom: 20px;
+}
+
+.user-button {
+	color: #ffffff;
+	background-color: #000000;
+	border: 1px #ffffff groove;
+	width: 100px !important;
+	font-size: large;
+}
+
+.user-button:hover {
+	border: 1px #000000 groove;
+	color: #000000;
+	font-weight: bold;
+}
+
+.user-social-media-button:hover {
+	background-color: #b3ddf2;
+	color: #ff0000;
+}
+
+.user-github-icon {
+	color: #000000;
+	font-size: 1.8em;
+}
+
+.user-github-icon:hover {
+	color: #ff0000;
+	font-size: 1.8em;
+	font-weight: bold;
+	background-color: #b3ddf2;
+}
+
+.user-linkedin-icon {
+	color: #000000;
+	font-size: 1.8em;
+}
+
+.user-linkedin-icon:hover {
+	color: #ff0000;
+	font-size: 1.8em;
+	font-weight: bold;
+	background-color: #b3ddf2;
+}
+
+.user-twitter-icon {
+	color: #000000;
+	font-size: 1.8em;
+}
+
+.user-twitter-icon:hover {
+	color: #ff0000;
+	font-size: 1.8em;
+	font-weight: bold;
+	background-color: #b3ddf2;
 }
 
 .page-skeleton {
@@ -43,6 +118,7 @@
 	/* background: rgba(255, 255, 255, 0.2) */
 	display: inline-block;
 	padding: 0 0px;
+	padding-left: 10px;
 }
 
 .layout-logo {
@@ -53,12 +129,12 @@
 	font-family: Helvetica, sans-serif;
 	font-size: 4rem;
 	color: #000000;
-	font-style: url(https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap), cursive;
+	font-style: url(https://fonts.googleapis.com/css2?family=Great%20Vibes&display=swap),
+		cursive;
 }
 
 .layout-anchor:hover {
 	color: #eb57a3;
-
 }
 
 .error-banner {
@@ -79,7 +155,6 @@
 
 .affix-header {
 	z-index: 99;
-	padding: 20px;
 }
 
 .app-layout {
@@ -88,9 +163,9 @@
 	min-height: 100vh;
 }
 
-/* .ant-card-actions {
-    background-color: #000000;
-} */
+.ant-card-actions {
+	background-color: #000000;
+}
 
 /* .header {
 	padding-bottom: 20px;
