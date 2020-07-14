@@ -7,7 +7,7 @@ export const Footer: FC = () => {
     return (
         <ContainerFooter>
             <Center>
-                <a href="https://github.com/DopamineDriven/wcd-apollo-gql" target="__blank">{`© ${currentYear}`}</a>
+                <a style={{ color: "black" }} href="https://github.com/DopamineDriven/wcd-apollo-gql" target="__blank">{`© ${currentYear}`}</a>
             </Center>
         </ContainerFooter>
     );

@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Center = styled.div`
 	max-width: inherit;
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 20px;
-	margin: auto;
 
 	@media (max-width: inherit) {
 		max-width: inherit;

@@ -1,103 +1,181 @@
-import React, { FC } from "react";
+import React from "react";
+import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
-import { NextPage } from "next";
-import { User } from "../lib/viewer.graphql";
-import styled from "styled-components";
-// import { Avatar } from "antd";
-// import { UserOutlined } from "@ant-design/icons";
+import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
+import { initializeApollo } from "../lib/apollo";
+import {
+	Avatar,
+	Button,
+	Card,
+	// Col,
+	Divider,
+	Layout,
+	// Row,
+	Spin,
+	Typography
+} from "antd";
+import {
+	GithubOutlined,
+	LinkedinOutlined,
+	TwitterOutlined,
+	UserOutlined
+} from "@ant-design/icons";
+import { ErrorBanner, iconColor } from "../utils";
+import { PageSkeleton } from "../components";
 
-export const TitlePostBody = styled.h2`
-	font-size: 2.8rem;
-	line-height: 1.2;
-	margin: 10px 0 20px;
+const { Meta } = Card;
+const { Content } = Layout;
+const { Paragraph, Text, Title } = Typography;
 
-	@media (max-width: 800px) {
-		font-size: 1.8rem;
-		margin: 15px 0;
-	}
-`;
+export async function getStaticProps({}: GetStaticProps) {
+	const apolloClient = initializeApollo();
 
-export const RolePostBody = styled.h4`
-	margin: 0 20px 20px 0px;
-	font-size: 1.6rem;
-	font-weight: 0.5em;
+	await apolloClient.query({
+		query: ViewerDocument
+	});
 
-	& > * {
-		margin: 0 0 10px;
-	}
-`;
-
-export const FigurePostBody = styled.figure`
-	padding: 0 10% 0 0;
-	margin: 0 20px 30px;
-	max-width: 100%;
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	border-radius: 6px;
-
-	image {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		object-fit: cover;
-		object-position: center;
-	}
-
-	@media (max-width: 800px) {
-		margin-bottom: 10px;
-	}
-`;
-
-export const ContentPostBody = styled.div`
-	font-size: 1.25rem;
-	line-height: 1.4;
-	max-width: 800px;
-	text-align: justify;
-`;
-
-export const MetaPostBody = styled.footer`
-	color: ${p => p.theme.colors.gray};
-
-	& > * {
-		margin-right: 0.3em;
-	}
-`;
-
-interface AboutProps {
-	user: User;
+	return {
+		props: {
+			initialApolloState: apolloClient.cache.extract()
+		}
+	};
 }
 
-const About: FC<AboutProps & NextPage> = () => {
-	return (
-		<div>
-			{/* <TitlePostBody>{user.name}</TitlePostBody>
-			<FigurePostBody>
-				<Avatar
-					src={user.image}
-					alt={user.name}
-					style={{ verticalAlign: "center" }}
-					icon={<UserOutlined />}
-					shape="circle"
-					size={400}
+const About: NextPage = () => {
+	const { data, loading, error } = useViewerQuery();
+	if (data) {
+		const { viewers } = data!;
+		console.log(viewers);
+
+		const items = viewers.map(viewer => (
+			<Card
+				key={viewer.id}
+				hoverable={true}
+				style={{ display: "inline-block", width: "30%" }}
+				className="user-card-grid"
+				cover={
+					<img
+						src={`${viewer.coverphoto}`}
+						alt={`nextjs and JAMstack`}
+						className="user-avatar"
+					/>
+				}
+				actions={[
+					<Button
+						href={viewer.github}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<GithubOutlined
+							key="github"
+							className="user-github-icon"
+							color={iconColor}
+						/>
+					</Button>,
+					<Button
+						href={viewer.linkedin}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<LinkedinOutlined
+							key="linkedin"
+							className="user-linkedin-icon"
+							color={iconColor}
+						/>
+					</Button>,
+					<Button
+						href={viewer.twitter}
+						target="__blank"
+						className="user-social-media-button"
+					>
+						<TwitterOutlined
+							key="twitter"
+							className="user-twitter-icon"
+							color={iconColor}
+						/>
+					</Button>
+				]}
+			>
+				<Title level={4} className="user-details">
+					<Text className="user-name-user-role">
+						{viewer.name}—{viewer.role}
+					</Text>
+				</Title>
+				<Divider />
+				<Meta
+					description={
+						<Button
+							style={{ float: "right" }}
+							size="large"
+							type="link"
+							className="user-button"
+						>
+							<Link href="/about">
+								<a>About</a>
+							</Link>
+						</Button>
+					}
+					avatar={
+						<Avatar
+							src={viewer.image}
+							size={200}
+							icon={UserOutlined}
+							className="user-avatar"
+							shape="circle"
+						/>
+					}
 				/>
-			</FigurePostBody>
-			<RolePostBody>{user.role}</RolePostBody>
-			<ContentPostBody dangerouslySetInnerHTML={{ __html: user.content }} />
-			<MetaPostBody>
-				<span>{user.email}</span>
-				<span>&middot;</span> */}
-			<Link href="/">
-				<a>Home</a>
-			</Link>{" "}
-			<span>&middot;</span>
-			<a href={"./"} target="__blank">
-				Source
-			</a>
-			{/* </MetaPostBody> */}
-		</div>
-	);
+				<Divider />
+				<Paragraph>
+					<Text className="user-content">
+						<em>{viewer.content}</em>
+					</Text>
+				</Paragraph>
+			</Card>
+		));
+
+		return error ? (
+			<Content className="user">
+				<ErrorBanner description="error occurred; please try again" />
+				<PageSkeleton />
+			</Content>
+		) : loading ? (
+			<Content className="user">
+				<div className="spin-section">
+					<Spin size="large" tip="Launching App" />
+					<PageSkeleton />
+				</div>
+			</Content>
+		) : (
+			<Content className="user-card">
+				{/* <Row gutter={24} justify="space-between">
+					<Col xs={24} lg={14} flex="auto"> */}
+				<ul>{items}</ul>
+				{/* </Col>
+				</Row> */}
+				<div
+					style={{
+						color: "black",
+						height: "100vh",
+						paddingTop: "100px",
+						verticalAlign: "center"
+					}}
+				>
+					<Button
+						className="index-button"
+						type="link"
+						size="large"
+						shape="round"
+					>
+						<Link href="/">
+							<a className="index-anchor">Home</a>
+						</Link>{" "}
+					</Button>
+				</div>
+			</Content>
+		);
+	}
+	return <div></div>;
 };
 
 export default About;

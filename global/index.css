@@ -1,8 +1,45 @@
 @import url(https://fonts.googleapis.com/css2?family=Great%20Vibes&display=swap);
-* body {
-	background-color: #e2e8f0;
+@import url(https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap);
+.body {
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to top,
+		#eef2f3,
+		#8e9eab
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to top,
+		#eef2f3,
+		#8e9eab
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	align-content: center;
 	align-items: center;
+}
+
+.index-body {
+	color: #000000;
+	width: 55% !important;
+	float: right !important;
+}
+
+.index-button {
+	width: 150px;
+	border: solid black 3px;
+	background-color: #ffffff;
+	align-content: center;
+}
+
+.index-button:hover {
+	width: 150px;
+	border: solid #ffffff 3px;
+	background-color: #b3ddf2;
+}
+
+.index-anchor {
+	color: #000000;
+	font-weight: bolder;
+	letter-spacing: 0.15em;
+	font-family: 'Julius Sans One';
 }
 
 .user-avatar {
@@ -11,18 +48,11 @@
 	/* border: outset #000000 2px; */
 }
 
-@media (max-width: 75em) {
-	.user-card {
-		padding-left: 20px;
-		padding-right: 20px;
-		display: inline;
-	}
+.user-card {
+	padding-left: 20px;
+	padding-right: 20px;
+	display: inline;
 }
-
-/* .user-card {
-	margin: 0 auto;
-	width: "33.33%";
-} */
 
 .user-card-grid {
 	width: "33.33%";
@@ -126,7 +156,7 @@
 }
 
 .layout-anchor {
-	font-family: 'Great Vibes', cursive;
+	font-family: "Great Vibes", cursive;
 	font-size: 3rem;
 	color: #000000;
 }
@@ -161,8 +191,10 @@
 
 .app-layout {
 	position: relative;
-	background: #ffffff;
-	min-height: 100vh;
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .ant-card-actions {
