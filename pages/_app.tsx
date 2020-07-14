@@ -22,7 +22,11 @@ export default function App({ Component, pageProps }: AppProps) {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle theme={theme} />
 				<Head>
-					<title>Next.ts</title>
+					<title>Windy City Devs</title>
+					<meta property="og:title" content="Windy City Devs" key="title" />
+				</Head>
+				<Head>
+					<meta property="og:title" content="Windy City Devs" key="title" />
 				</Head>
 				<Layout className="app-layout">
 					<Affix offsetTop={0} className="affix-header">

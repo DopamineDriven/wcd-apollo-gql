@@ -8,9 +8,10 @@
     "jsx": "preserve",
     "lib": [
       "DOM",
-      "ES2017"
+      "DOM.Iterable",
+      "ESNext"
     ],
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
@@ -19,7 +20,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2017"
+    "target": "es5"
   },
   "exclude": [
     "node_modules"
