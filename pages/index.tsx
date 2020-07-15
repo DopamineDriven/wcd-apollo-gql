@@ -3,7 +3,7 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { ViewerDocument } from "../lib/viewer.graphql";
 import { initializeApollo } from "../lib/apollo";
-import { Button } from "antd";
+import { Button } from "antd/lib/index";
 
 export async function getStaticProps({}: GetStaticProps) {
 	const apolloClient = initializeApollo();
