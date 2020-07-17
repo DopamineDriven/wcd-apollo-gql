@@ -9,11 +9,10 @@ const users: User[] = [
 		github: "https://github.com/DopamineDriven",
 		twitter: "https://twitter.com/Dopamine_Driven",
 		linkedin: "https://www.linkedin.com/in/asross/",
-		image:
-			"https://res.cloudinary.com/asross311/image/upload/v1592831978/ASR_Assets/cropped-a_nqaem7.png",
+		image: "/assets/cropped-a.png",
 		content:
-			'"The mechanic that would perfect his work must first sharpen his tools." - Confucius',
-		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png",
+			'"The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools." - Confucius',
+		coverphoto: "/assets/next-jamstack.png",
 		birthday: "03-11-1992"
 	},
 	{
@@ -24,11 +23,10 @@ const users: User[] = [
 		github: "https://github.com/JShields30",
 		twitter: "https://twitter.com/JShields312",
 		linkedin: "https://www.linkedin.com/in/jshields90/",
-		image:
-			"https://res.cloudinary.com/asross311/image/upload/v1592801826/ASR_Assets/Joe_vlnzpm.jpg",
+		image: "/assets/Joe.jpg",
 		content:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget ornare neque.",
-		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png",
+			"We need to do what any animal in nature does when it’s cornered, act erratically, and blindly lash out at everything around us.",
+		coverphoto: "/assets/next-jamstack.png",
 		birthday: ""
 	},
 	{
@@ -39,11 +37,10 @@ const users: User[] = [
 		github: "https://github.com/yhlee-dho",
 		twitter: "https://twitter.com/YongLee08380800",
 		linkedin: "https://www.linkedin.com/in/yong-lee-a16430193/",
-		image:
-			"https://res.cloudinary.com/asross311/image/upload/v1594134267/ASR_Assets/Ghengis_Yong_epwjh8.png",
+		image: "/assets/yong.png",
 		content:
-			"Vivamus imperdiet, sapien sit amet blandit iaculis, augue velit fringilla urna, eget tempus quam elit ac tortor.",
-		coverphoto: "https://res.cloudinary.com/asross311/image/upload/v1594586260/ASR_Assets/next-jamstack_ml7non.png",
+			"Erlich Bachman is a poor sad a man, and he's a very fat. Is that a dead pig? Yes. It's just like Errich. Pig is most like a fat human.",
+		coverphoto: "/assets/next-jamstack.png",
 		birthday: ""
 	}
 ];

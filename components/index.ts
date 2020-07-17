@@ -1,4 +1,4 @@
-export * from "./Footer";
-export * from "./Header";
 export * from "./PageSkeleton";
-export * from "./FixedHeader"
+export * from "./FixedHeader";
+export * from "./Meta";
+export * from "./Github";

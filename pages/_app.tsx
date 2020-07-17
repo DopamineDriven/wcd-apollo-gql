@@ -1,13 +1,13 @@
 import { ApolloProvider } from "@apollo/react-hooks";
 import { useApollo } from "../lib/apollo";
 import React from "react";
-import Head from "next/head";
+// import Head from "next/head";
 import { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
-import { Footer, FixedHeader } from "../components";
-import { Center } from "../components/Style";
-import { GlobalStyle, theme } from "../global/index";
-import { Affix, Layout } from "antd";
+// // import { ThemeProvider } from "styled-components";
+// import { Footer, FixedHeader } from "../components";
+// import { Center } from "../components/Style";
+// // import { GlobalStyle, theme } from "../global/index";
+// import { Affix, Layout } from "antd";
 import "antd/dist/antd.css";
 import "../global/index.css";
 
@@ -19,27 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	const apolloClient = useApollo(pageProps.initialApolloState);
 	return (
 		<ApolloProvider client={apolloClient}>
-			<ThemeProvider theme={theme}>
-				<GlobalStyle theme={theme} />
-				<Head>
-					<title>Windy City Devs</title>
-					<meta property="og:title" content="Windy City Devs" key="title" />
-				</Head>
-				<Head>
-					<meta property="og:title" content="Windy City Devs" key="title" />
-				</Head>
-				<Layout className="app-layout">
-					<Affix offsetTop={0} className="affix-header">
-						<FixedHeader />
-					</Affix>
-					<main className="main">
-						<Center>
-							<Component {...pageProps} />
-						</Center>
-					</main>
-					<Footer />
-				</Layout>
-			</ThemeProvider>
+			<Component {...pageProps} />
 		</ApolloProvider>
 	);
 }
