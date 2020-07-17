@@ -8,10 +8,10 @@ import {
 	Avatar,
 	Button,
 	Card,
-	// Col,
+	Col,
 	Divider,
 	Layout,
-	// Row,
+	Row,
 	Spin,
 	Typography,
 	Affix
@@ -41,14 +41,14 @@ const Index: NextPage = () => {
 				hoverable={true}
 				style={{
 					display: "inline-block",
-					width: "33.33%",
+					width: "30%",
 					textAlign: "justify",
 					margin: "20px"
 				}}
 				cover={
 					<img
 						src={`${viewer.coverphoto}`}
-						alt={`nextjs and JAMstack`}
+						alt={`${viewer.name}`}
 						style={{ textAlign: "center", verticalAlign: "middle" }}
 					/>
 				}
@@ -163,7 +163,7 @@ const Index: NextPage = () => {
 				<Head>
 					<title>SSR, Apollo, GraphQL, and Next.js</title>
 				</Head>
-				<body>
+				<body className="app-layout">
 					<Content className="user-card">
 						<div className="about-to-home-button">
 							<Button
@@ -178,11 +178,11 @@ const Index: NextPage = () => {
 							</Button>
 						</div>
 						<Divider />
-						{/* <Row gutter={24} justify="space-between">
-					<Col xs={24} lg={14} flex="auto"> */}
-						<ul>{items}</ul>
-						{/* </Col>
-				</Row> */}
+						<Row gutter={24} justify="space-between">
+					<Col xs={24} lg={14} flex="auto">
+						{items}
+						</Col>
+				</Row>
 					</Content>
 				</body>
 			</Layout>
