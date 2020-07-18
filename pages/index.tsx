@@ -77,6 +77,7 @@ const Index = () => {
 									sm: 2,
 									lg: 4
 								}}
+								header={<div></div>}
 								dataSource={items}
 								renderItem={item => (
 									<Content className="user-card">
@@ -114,3 +115,6 @@ export async function getStaticProps({}: GetStaticProps) {
 		}
 	};
 }
+
+
+// https://ant.design/components/list/
