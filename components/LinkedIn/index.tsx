@@ -11,11 +11,7 @@ export const Linkedin = ({ linkedin }: Props) => {
 			href={`${linkedin}`}
 			target="__blank"
 			className="user-social-media-button"
-			style={{
-				border: "1px #000000 groove",
-				color: "#000000",
-				fontWeight: "bold"
-			}}
+			shape="round"
 			icon={
 				<LinkedinOutlined key="linkedin" className="user-social-media-icon" />
 			}

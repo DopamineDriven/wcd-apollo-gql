@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Great%20Vibes&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Julius%20Sans%20One&display=swap);
-
-.index-body {
-	color: #000000;
-}
 
 .index-button {
 	width: 200px;
@@ -35,12 +30,6 @@
 	float: right;
 	width: 55%;
 	vertical-align: center;
-}
-
-.user-avatar {
-	text-align: center;
-	vertical-align: middle;
-	/* border: outset #000000 2px; */
 }
 
 .user-card {
@@ -78,17 +67,17 @@
 }
 
 .user-social-media-button:hover {
-	background-color: #ffffff;
-	color: #ff0000;
+	color: #b3ddb3;
 }
 
 .user-social-media-icon {
 	color: #ffffff;
 	font-size: 1.8em;
+	font-weight: bold;
 }
 
 .user-social-media-icon:hover {
-	color: #ff0000;
+	color: #b3ddb3;
 	font-size: 1.8em;
 	font-weight: bold;
 }

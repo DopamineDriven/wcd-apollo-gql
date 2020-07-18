@@ -12,9 +12,9 @@ export const UserAvatar = ({ src, alt }: Props) => {
 			src={`${src}`}
 			size={200}
 			icon={UserOutlined}
-			className="user-avatar"
 			shape="circle"
 			alt={`${alt}`}
+			style={{ textAlign: "center", verticalAlign: "center" }}
 		/>
 	);
 };

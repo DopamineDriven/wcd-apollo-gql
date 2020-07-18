@@ -14,11 +14,7 @@ export const Email = ({ email }: Props) => {
 			href={`${email}`}
 			className="user-social-media-button"
             target="__blank"
-			style={{
-				border: "1px #000000 groove",
-				color: "#000000",
-                fontWeight: "bold"
-			}}
+            shape="round"
 			icon={<MailOutlined key="github" className="user-social-media-icon" />}
 		/>
 	);

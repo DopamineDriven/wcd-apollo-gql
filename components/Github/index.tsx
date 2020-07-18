@@ -14,11 +14,7 @@ export const Github = ({ github }: Props) => {
 			href={`${github}`}
 			className="user-social-media-button"
 			target="__blank"
-			style={{
-				border: "1px #000000 groove",
-				color: "#000000",
-				fontWeight: "bold"
-			}}
+			shape="round"
 			icon={<GithubOutlined key="github" className="user-social-media-icon" />}
 		/>
 	);
