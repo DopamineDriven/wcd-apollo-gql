@@ -3,6 +3,7 @@ export * from "./Details";
 export * from "./FixedHeader";
 export * from "./Footer";
 export * from "./Github";
+export * from "./IndexConditionals";
 export * from "./LinkedIn";
 export * from "./MetaData";
 export * from "./MetaDescription";

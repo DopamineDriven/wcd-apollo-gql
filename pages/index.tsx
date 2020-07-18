@@ -1,10 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import { NextPage, GetStaticProps } from "next";
-import Link from "next/link";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
-import { Button, Card, Col, Divider, Layout, Row, Spin, Affix } from "antd";
+import { Card, Col, Divider, Layout, Row, Affix } from "antd";
 import { ErrorBanner } from "../utils";
 import {
 	ContentDetails,
@@ -14,7 +13,8 @@ import {
 	Github,
 	Linkedin,
 	MetaDescription,
-	PageSkeleton,
+	OnError,
+	OnLoad,
 	Twitter,
 	UserAvatar,
 	UserDetails
@@ -55,21 +55,9 @@ const Index: NextPage = () => {
 		));
 
 		return error ? (
-			<Layout className="app-layout">
-				<Content className="user">
-					<ErrorBanner description="error occurred; please try again" />
-					<PageSkeleton />
-				</Content>
-			</Layout>
+			<OnError />
 		) : loading ? (
-			<Layout className="app-layout">
-				<Content className="user">
-					<div className="spin-section">
-						<Spin size="large" tip="Launching App" />
-						<PageSkeleton />
-					</div>
-				</Content>
-			</Layout>
+			<OnLoad />
 		) : (
 			<Layout className="app-layout">
 				<Affix offsetTop={0} className="affix-header">
@@ -79,14 +67,14 @@ const Index: NextPage = () => {
 					<title>SSR, Apollo, GraphQL, and Next.js</title>
 				</Head>
 				<>
-				<Row gutter={24} justify="space-between" className="index-row">
-					<Col xs={24} lg={8}>
-						<Content className="user-card">
-							<Divider />
-							{items}
-						</Content>
-					</Col>
-				</Row>
+					<Row gutter={24} justify="space-between" className="index-row">
+						<Col xs={24} lg={8}>
+							<Content className="user-card">
+								<Divider />
+								{items}
+							</Content>
+						</Col>
+					</Row>
 				</>
 				<FixedFooter />
 			</Layout>
