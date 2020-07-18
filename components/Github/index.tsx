@@ -19,10 +19,7 @@ export const Github = ({ github }: Props) => {
 				fontWeight: "bold"
 			}}
 		>
-			<GithubOutlined
-				key="github"
-				className="user-social-media-icon"
-			/>
+			<GithubOutlined key="github" className="user-social-media-icon" />
 		</Button>
 	);
 };

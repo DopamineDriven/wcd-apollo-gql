@@ -5,7 +5,7 @@ type Props = {
 	linkedin: string;
 };
 
-export const Github = ({ linkedin }: Props) => {
+export const Linkedin = ({ linkedin }: Props) => {
 	return (
 		<Button
 			href={`${linkedin}`}
@@ -16,10 +16,7 @@ export const Github = ({ linkedin }: Props) => {
 				fontWeight: "bold"
 			}}
 		>
-			<LinkedinOutlined
-				key="linkedin"
-				className="user-social-media-icon"
-			/>
+			<LinkedinOutlined key="linkedin" className="user-social-media-icon" />
 		</Button>
 	);
 };

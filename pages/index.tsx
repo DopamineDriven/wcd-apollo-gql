@@ -4,29 +4,23 @@ import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
+import { Button, Card, Col, Divider, Layout, Row, Spin, Affix } from "antd";
+import { ErrorBanner } from "../utils";
 import {
-	Avatar,
-	Button,
-	Card,
-	Col,
-	Divider,
-	Layout,
-	Row,
-	Spin,
-	Typography,
-	Affix
-} from "antd";
-import {
-	LinkedinOutlined,
-	TwitterOutlined,
-	UserOutlined
-} from "@ant-design/icons";
-import { ErrorBanner, iconColor } from "../utils";
-import { PageSkeleton, FixedHeader, Github } from "../components";
+	ContentDetails,
+	CoverImage,
+	FixedHeader,
+	Github,
+	Linkedin,
+	MetaDescription,
+	PageSkeleton,
+	Twitter,
+	UserAvatar,
+	UserDetails
+} from "../components";
 
 const { Meta } = Card;
 const { Content } = Layout;
-const { Paragraph, Text, Title } = Typography;
 
 const Index: NextPage = () => {
 	const { data, loading, error } = useViewerQuery();
@@ -43,83 +37,19 @@ const Index: NextPage = () => {
 					textAlign: "justify",
 					margin: "20px"
 				}}
-				cover={
-					<img
-						src={`${viewer.coverphoto}`}
-						alt={`${viewer.name}`}
-						style={{ textAlign: "center", verticalAlign: "middle" }}
-					/>
-				}
+				cover={<CoverImage src={viewer.coverphoto} alt={viewer.name} />}
 				actions={[
 					<Github github={viewer.github} />,
-					<Button
-						href={viewer.linkedin}
-						target="__blank"
-						style={{
-							border: "1px #000000 groove",
-							color: "#000000",
-							fontWeight: "bold"
-						}}
-					>
-						<LinkedinOutlined
-							key="linkedin"
-							className="user-linkedin-icon"
-							color={iconColor}
-						/>
-					</Button>,
-					<Button
-						href={viewer.twitter}
-						target="__blank"
-						style={{
-							border: "1px #000000 groove",
-							color: "#000000",
-							fontWeight: "bold"
-						}}
-					>
-						<TwitterOutlined
-							key="twitter"
-							className="user-twitter-icon"
-							color={iconColor}
-						/>
-					</Button>
+					<Linkedin linkedin={viewer.linkedin} />,
+					<Twitter twitter={viewer.twitter} />
 				]}
 			>
-				<Title level={4} className="user-details">
-					<Text className="user-name-user-role">
-						{viewer.name}—{viewer.role}
-					</Text>
-				</Title>
-				<Divider />
+				<UserDetails name={viewer.name} role={viewer.role} />
 				<Meta
-					description={
-						<Button
-							style={{ float: "right" }}
-							size="large"
-							type="link"
-							className="user-button"
-						>
-							<Link href="/about">
-								<a>About</a>
-							</Link>
-						</Button>
-					}
-					avatar={
-						<Avatar
-							src={viewer.image}
-							size={200}
-							icon={UserOutlined}
-							className="user-avatar"
-							shape="circle"
-							alt={viewer.name}
-						/>
-					}
+					description={<MetaDescription />}
+					avatar={<UserAvatar src={viewer.image} alt={viewer.name} />}
 				/>
-				<Divider />
-				<Paragraph>
-					<Text className="user-content">
-						<em>{viewer.content}</em>
-					</Text>
-				</Paragraph>
+				<ContentDetails content={viewer.content} />
 			</Card>
 		));
 
@@ -141,7 +71,6 @@ const Index: NextPage = () => {
 			</Layout>
 		) : (
 			<Layout className="app-layout">
-				<Meta />
 				<Affix offsetTop={0} className="affix-header">
 					<FixedHeader />
 				</Affix>
@@ -190,25 +119,4 @@ export async function getStaticProps({}: GetStaticProps) {
 			initialApolloState: apolloClient.cache.extract()
 		}
 	};
-}
-
-{
-	/* <Head>
-<title>Windy City Devs</title>
-<meta property="og:title" content="Windy City Devs" key="title" />
-</Head>
-<Head>
-<meta property="og:title" content="Windy City Devs" key="title" />
-</Head>
-<Layout className="app-layout">
-<Affix offsetTop={0} className="affix-header">
-	<FixedHeader />
-</Affix>
-<main className="main">
-	<Center>
-		<Component {...pageProps} />
-	</Center>
-</main>
-<Footer />
-</Layout> */
 }
