@@ -18,7 +18,13 @@ export const ErrorBanner = ({
 			message={message}
 			description={description}
 			type="error"
-			className="error-banner"
+			style={{
+				position: "fixed",
+				width: "100%",
+				top: "64px",
+				left: "0",
+				zIndex: 99
+			}}
 		/>
 	);
 };

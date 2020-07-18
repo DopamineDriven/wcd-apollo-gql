@@ -81,14 +81,6 @@
 	color: #eb57a3;
 }
 
-.error-banner {
-	position: fixed;
-	width: 100%;
-	top: 64px;
-	left: 0;
-	z-index: 99;
-}
-
 @media (min-width: 992px) .ant-col-lg-8 {
 	display: block;
 	/* flex: 0 0 33.33333333%; */
