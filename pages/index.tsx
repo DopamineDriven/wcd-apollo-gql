@@ -1,33 +1,33 @@
 import React from "react";
-import Head from "next/head";
-import { NextPage, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
-import { Card, Col, Divider, Layout, Row, Affix, List } from "antd";
+import { Card, Col, Divider, Layout, Row, List } from "antd";
 import { ErrorBanner } from "../utils";
 
 import {
 	ContentDetails,
 	CoverImage,
 	Email,
-	FixedHeader,
 	FixedFooter,
 	Github,
 	Linkedin,
 	MetaDescription,
 	OnError,
 	OnLoad,
+	OnSuccess,
 	Twitter,
 	UserAvatar,
-	UserDetails,
+	UserDetails
 } from "../components";
 
 const { Meta } = Card;
 const { Content } = Layout;
 const { Item } = List;
 
-const Index: NextPage = () => {
+const Index = () => {
 	const { data, loading, error } = useViewerQuery();
+
 	if (data) {
 		const { viewers } = data!;
 		// console.log(viewers);
@@ -65,31 +65,36 @@ const Index: NextPage = () => {
 			<OnLoad />
 		) : (
 			<Layout className="app-layout">
-				<Affix offsetTop={0} className="affix-header">
-					<FixedHeader />
-				</Affix>
-				<Head>
-					<title>SSR, Apollo, GraphQL, and Next.js</title>
-				</Head>
+				<OnSuccess />
 				<div className="index-row-keeper">
+					<Divider />
 					<Row gutter={24} justify="space-between" className="index-row">
 						<Col xs={24} lg={8} xl={6} style={{ alignContent: "center" }}>
-							<Content className="user-card">
-								<Divider />
-								{items}
-							</Content>
+							<List
+								grid={{
+									gutter: 8,
+									xs: 1,
+									sm: 2,
+									lg: 4
+								}}
+								dataSource={items}
+								renderItem={item => (
+									<Content className="user-card">
+										<Item>{item}</Item>
+									</Content>
+								)}
+							/>
 						</Col>
+						<Divider />
 						<FixedFooter />
 					</Row>
 				</div>
 			</Layout>
 		);
 	}
-	return (
-		<div>
-			<ErrorBanner />
-		</div>
-	);
+	<div>
+		<ErrorBanner />
+	</div>;
 };
 
 export default Index;

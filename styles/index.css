@@ -27,7 +27,8 @@
 }
 
 .user-social-media-button {
-	background-color: #000000;
+	background: #000000;
+	outline: #ffffff .5px solid;
 }
 
 .user-social-media-button:hover {
@@ -38,6 +39,7 @@
 	color: #ffffff;
 	font-size: 1.8em;
 	font-weight: bold;
+	margin: 1px 0 2px 0;
 }
 
 .user-social-media-icon:hover {
