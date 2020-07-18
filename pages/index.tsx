@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { NextPage, GetStaticProps, NextApiRequest } from "next";
+import { NextPage, GetStaticProps } from "next";
 import Link from "next/link";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
@@ -22,8 +22,8 @@ import {
 const { Meta } = Card;
 const { Content } = Layout;
 
-const { data, loading, error } = useViewerQuery();
 const Index: NextPage = () => {
+	const { data, loading, error } = useViewerQuery();
 	if (data) {
 		const { viewers } = data!;
 		// console.log(viewers);
@@ -77,32 +77,34 @@ const Index: NextPage = () => {
 				<Head>
 					<title>SSR, Apollo, GraphQL, and Next.js</title>
 				</Head>
-				<body className="app-layout">
-					<Content className="user-card">
-						<div className="about-to-home-button">
-							<Button
-								className="index-button"
-								type="link"
-								size="large"
-								shape="round"
-							>
-								<Link href="/">
-									<a className="index-anchor">Technology</a>
-								</Link>{" "}
-							</Button>
-						</div>
-						<Divider />
-						<Row gutter={24} justify="space-between">
-							<Col xs={24} lg={24} flex="auto">
-								{items}
-							</Col>
-						</Row>
-					</Content>
-				</body>
+				<Content className="user-card">
+					<div className="about-to-home-button">
+						<Button
+							className="index-button"
+							type="link"
+							size="large"
+							shape="round"
+						>
+							<Link href="/">
+								<a className="index-anchor">Technology</a>
+							</Link>{" "}
+						</Button>
+					</div>
+					<Divider />
+					<Row gutter={24} justify="space-between">
+						<Col xs={24} lg={24} flex="auto">
+							{items}
+						</Col>
+					</Row>
+				</Content>
 			</Layout>
 		);
 	}
-	return <div></div>;
+	return (
+		<div>
+			<ErrorBanner />
+		</div>
+	);
 };
 
 export default Index;
@@ -116,8 +118,7 @@ export async function getStaticProps({}: GetStaticProps) {
 
 	return {
 		props: {
-			initialApolloState: apolloClient.cache.extract(),
-			data
+			initialApolloState: apolloClient.cache.extract()
 		}
 	};
 }

@@ -1,6 +1,15 @@
 # wcd-apollo-gql 🐜🐜🐜BUILD🐜🐜🐜
 
+### SiteMap for enhanced SEO
+- https://priver.dev/posts/sitemap-with-next-js
+- https://dev.to/embiem/auto-generate-sitemapxml-in-nextjs-2nh1
+
+### Track Google Analytics in custom _doc
+- https://github.com/vercel/next.js/tree/canary/examples/with-google-analytics
 - optimized images
+
+### Adaptive Icon Support in PWAs with Maskable Icons
+- https://web.dev/maskable-icon/?utm_source=devtools
 ---
 ## add a new remote origin
 ```git
