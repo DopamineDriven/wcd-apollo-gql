@@ -8,6 +8,7 @@ import { ErrorBanner } from "../utils";
 import {
 	ContentDetails,
 	CoverImage,
+	Email,
 	FixedHeader,
 	FixedFooter,
 	Github,
@@ -43,7 +44,8 @@ const Index: NextPage = () => {
 				actions={[
 					<Github github={viewer.github} />,
 					<Linkedin linkedin={viewer.linkedin} />,
-					<Twitter twitter={viewer.twitter} />
+					<Twitter twitter={viewer.twitter} />,
+					<Email email={viewer.email} />
 				]}
 			>
 				<UserDetails name={viewer.name} role={viewer.role} />
@@ -75,9 +77,9 @@ const Index: NextPage = () => {
 								{items}
 							</Content>
 						</Col>
+						<FixedFooter />
 					</Row>
-					</div>
-				<FixedFooter />
+				</div>
 			</Layout>
 		);
 	}

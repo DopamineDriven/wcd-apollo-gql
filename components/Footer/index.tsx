@@ -15,7 +15,8 @@ export const FixedFooter: FC = () => {
 				backgroundColor: "#000000",
 				color: "#ffffff",
                 position: "sticky",
-                borderTop: "solid 1px #434343"
+                borderTop: "solid 1px #434343",
+                width: "100%"
 			}}
 		>
 			<CopyrightCircleOutlined

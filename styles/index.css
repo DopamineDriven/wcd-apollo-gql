@@ -14,7 +14,7 @@
 
 .index-button:hover {
 	width: 200px;
-	border: solid #ffffff 3px;
+	outline: solid #ffffff 2px;
 	background-color: #b3ddf2;
 }
 
@@ -67,19 +67,23 @@
 .user-button {
 	color: #ffffff;
 	background-color: #000000;
-	border: 1px #ffffff groove;
+	border: 1px #ffffff solid;
 	width: 100px !important;
 	font-size: large;
 	box-shadow: 0 2px 8px #f0f1f2;
 }
 
+.user-social-media-button {
+	background-color: #000000;
+}
+
 .user-social-media-button:hover {
-	background-color: #b3ddf2;
+	background-color: #ffffff;
 	color: #ff0000;
 }
 
 .user-social-media-icon {
-	color: #000000;
+	color: #ffffff;
 	font-size: 1.8em;
 }
 
@@ -87,7 +91,6 @@
 	color: #ff0000;
 	font-size: 1.8em;
 	font-weight: bold;
-	background-color: #b3ddf2;
 }
 
 .page-skeleton {
@@ -167,6 +170,14 @@
 	min-height: 1px;
 }
 
+html {
+	overflow: auto;
+}
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
 .app-layout {
 	background-size: cover;
 	background: #000000; /* fallback for old browsers */
@@ -181,7 +192,13 @@
 		#000000
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100vh;
+	height: 100%;
+	position: relative;
+}
+
+.body-layout {
+	background-size: cover;
+	background: #000000; /* fallback for old browsers */
 }
 
 .ant-card-actions {
@@ -189,6 +206,7 @@
 }
 
 .index-row {
+	height: 100%;
 	width: 100%;
 	align-content: center;
 }
@@ -200,7 +218,7 @@
 
 .index-row-keeper {
 	padding-top: 10em;
-	height: 100vh;
+	height: 100%;
 }
 
 .index-card {

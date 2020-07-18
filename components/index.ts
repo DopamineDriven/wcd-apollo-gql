@@ -1,5 +1,6 @@
 export * from "./CoverImage";
 export * from "./Details";
+export * from "./Email";
 export * from "./FixedHeader";
 export * from "./Footer";
 export * from "./Github";
