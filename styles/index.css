@@ -1,21 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Great%20Vibes&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Julius%20Sans%20One&display=swap);
-.body {
-	background: #8e9eab; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#eef2f3,
-		#8e9eab
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#eef2f3,
-		#8e9eab
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	align-content: center;
-	align-items: center;
-
-}
 
 .index-body {
 	color: #000000;
@@ -93,12 +77,7 @@
 	border: 1px #ffffff groove;
 	width: 100px !important;
 	font-size: large;
-}
-
-.user-button:hover {
-	border: 1px #000000 groove;
-	color: #000000;
-	font-weight: bold;
+	box-shadow: 0 2px 8px #f0f1f2;
 }
 
 .user-social-media-button:hover {
@@ -106,36 +85,12 @@
 	color: #ff0000;
 }
 
-.user-github-icon {
+.user-social-media-icon {
 	color: #000000;
 	font-size: 1.8em;
 }
 
-.user-github-icon:hover {
-	color: #ff0000;
-	font-size: 1.8em;
-	font-weight: bold;
-	background-color: #b3ddf2;
-}
-
-.user-linkedin-icon {
-	color: #000000;
-	font-size: 1.8em;
-}
-
-.user-linkedin-icon:hover {
-	color: #ff0000;
-	font-size: 1.8em;
-	font-weight: bold;
-	background-color: #b3ddf2;
-}
-
-.user-twitter-icon {
-	color: #000000;
-	font-size: 1.8em;
-}
-
-.user-twitter-icon:hover {
+.user-social-media-icon:hover {
 	color: #ff0000;
 	font-size: 1.8em;
 	font-weight: bold;
@@ -152,7 +107,7 @@
 	box-shadow: 0 2px 8px #f0f1f2;
 	padding: 0;
 	z-index: 1;
-	width: 100%;
+	width: 100vw;
 }
 
 .layout-logo-fixed {
@@ -200,12 +155,9 @@
 	justify-content: center;
 }
 
-.affix-header {
-	z-index: 99;
-}
+
 
 .app-layout {
-	height: 100vh;
 	position: relative;
 	background: #000000; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
@@ -224,9 +176,3 @@
 .ant-card-actions {
 	background-color: #000000;
 }
-
-/* .header {
-	padding-bottom: 20px;
-	font-size: large;
-	margin-bottom: 20px;
-} */

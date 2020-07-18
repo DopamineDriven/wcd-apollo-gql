@@ -17,13 +17,12 @@ import {
 	Affix
 } from "antd";
 import {
-	GithubOutlined,
 	LinkedinOutlined,
 	TwitterOutlined,
 	UserOutlined
 } from "@ant-design/icons";
 import { ErrorBanner, iconColor } from "../utils";
-import { PageSkeleton, FixedHeader } from "../components";
+import { PageSkeleton, FixedHeader, Github } from "../components";
 
 const { Meta } = Card;
 const { Content } = Layout;
@@ -41,7 +40,6 @@ const Index: NextPage = () => {
 				hoverable={true}
 				style={{
 					display: "inline-block",
-					width: "30%",
 					textAlign: "justify",
 					margin: "20px"
 				}}
@@ -53,21 +51,7 @@ const Index: NextPage = () => {
 					/>
 				}
 				actions={[
-					<Button
-						href={viewer.github}
-						target="__blank"
-						style={{
-							border: "1px #000000 groove",
-							color: "#000000",
-							fontWeight: "bold"
-						}}
-					>
-						<GithubOutlined
-							key="github"
-							className="user-github-icon"
-							color={iconColor}
-						/>
-					</Button>,
+					<Github github={viewer.github} />,
 					<Button
 						href={viewer.linkedin}
 						target="__blank"
@@ -180,7 +164,7 @@ const Index: NextPage = () => {
 						</div>
 						<Divider />
 						<Row gutter={24} justify="space-between">
-							<Col xs={24} lg={14} flex="auto">
+							<Col xs={24} lg={24} flex="auto">
 								{items}
 							</Col>
 						</Row>

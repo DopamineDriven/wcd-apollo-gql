@@ -25,7 +25,7 @@ const users: User[] = [
 		linkedin: "https://www.linkedin.com/in/jshields90/",
 		image: "/assets/Joe.jpg",
 		content:
-			'"A leader gives articulation of the imagination of the population" - Jordan Bernt Peterson',
+			'"A leader gives articulation of the imagination of the population" - Jordan Peterson',
 		coverphoto: "/assets/next-jamstack.jpg",
 		birthday: ""
 	},

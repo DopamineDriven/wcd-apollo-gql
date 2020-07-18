@@ -1,17 +1,14 @@
-import { GithubOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-// type Props = {
-// 	viewers: React.ReactNode[];
-// };
+import { LinkedinOutlined } from "@ant-design/icons";
 
 type Props = {
-	github: string;
+	linkedin: string;
 };
 
-export const Github = ({ github }: Props) => {
+export const Github = ({ linkedin }: Props) => {
 	return (
 		<Button
-			href={`${github}`}
+			href={`${linkedin}`}
 			target="__blank"
 			style={{
 				border: "1px #000000 groove",
@@ -19,8 +16,8 @@ export const Github = ({ github }: Props) => {
 				fontWeight: "bold"
 			}}
 		>
-			<GithubOutlined
-				key="github"
+			<LinkedinOutlined
+				key="linkedin"
 				className="user-social-media-icon"
 			/>
 		</Button>

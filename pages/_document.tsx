@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
 					/>
 					<meta name="keywords" content="ssg, next, typescript" />
 				</Head>
-				<body>
+				<body style={{ background: "#000000"}}>
 					<Main />
 					<NextScript />
 				</body>
