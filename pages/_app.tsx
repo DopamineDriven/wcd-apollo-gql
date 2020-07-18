@@ -9,7 +9,8 @@ import { AppProps } from "next/app";
 // // import { GlobalStyle, theme } from "../global/index";
 // import { Affix, Layout } from "antd";
 import "antd/dist/antd.css";
-import "../global/index.css";
+import "../styles/index.css";
+import "../styles/global.css";
 
 export function reportWebVitals(metric: any) {
 	console.log(metric);

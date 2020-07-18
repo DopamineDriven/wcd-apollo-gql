@@ -11,7 +11,7 @@ const users: User[] = [
 		linkedin: "https://www.linkedin.com/in/asross/",
 		image: "/assets/cropped-a.jpg",
 		content:
-			'"The expectations of life depend upon diligence; the mechanic that would perfect his work must first sharpen his tools." - Confucius',
+			'"The mechanic that would perfect his work must first sharpen his tools." - Confucius',
 		coverphoto: "/assets/next-jamstack.jpg",
 		birthday: "03-11-1992"
 	},
@@ -25,7 +25,7 @@ const users: User[] = [
 		linkedin: "https://www.linkedin.com/in/jshields90/",
 		image: "/assets/Joe.jpg",
 		content:
-			"We need to do what any animal in nature does when it’s cornered, act erratically, and blindly lash out at everything around us.",
+			'"A leader gives articulation of the imagination of the population" - Jordan Bernt Peterson',
 		coverphoto: "/assets/next-jamstack.jpg",
 		birthday: ""
 	},
@@ -39,7 +39,7 @@ const users: User[] = [
 		linkedin: "https://www.linkedin.com/in/yong-lee-a16430193/",
 		image: "/assets/yong.jpg",
 		content:
-			"Erlich Bachman is a poor sad a man, and he's a very fat. Is that a dead pig? Yes. It's just like Errich. Pig is most like a fat human.",
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. ",
 		coverphoto: "/assets/next-jamstack.jpg",
 		birthday: ""
 	}

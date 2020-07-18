@@ -1,15 +1,17 @@
 import { GithubOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import { User } from "../../lib/viewer.graphql";
+// type Props = {
+// 	viewers: React.ReactNode[];
+// };
 
 type Props = {
-	viewers: User;
+	github: string | unknown;
 };
 
-export const Github = ({ viewers }: Props) => {
+export const Github = ({ github }: Props) => {
 	return (
 		<Button
-			href={viewers.github}
+			href={`${github}`}
 			target="__blank"
 			style={{
 				border: "1px #000000 groove",

@@ -126,6 +126,7 @@ const Index: NextPage = () => {
 							icon={UserOutlined}
 							className="user-avatar"
 							shape="circle"
+							alt={viewer.name}
 						/>
 					}
 				/>
@@ -179,10 +180,10 @@ const Index: NextPage = () => {
 						</div>
 						<Divider />
 						<Row gutter={24} justify="space-between">
-					<Col xs={24} lg={14} flex="auto">
-						{items}
-						</Col>
-				</Row>
+							<Col xs={24} lg={14} flex="auto">
+								{items}
+							</Col>
+						</Row>
 					</Content>
 				</body>
 			</Layout>
