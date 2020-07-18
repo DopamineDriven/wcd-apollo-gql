@@ -16,7 +16,15 @@ export const OnError: any = () => {
 export const OnLoad: any = () => {
 	<Layout className="app-layout">
 		<Content className="user">
-			<div className="spin-section">
+			<div
+				style={{
+					height: "100%",
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					justifyContent: "center"
+				}}
+			>
 				<Spin size="large" tip="Launching App" />
 				<PageSkeleton />
 			</div>

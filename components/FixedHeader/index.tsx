@@ -8,7 +8,7 @@ const { Header } = Layout;
 export const FixedHeader: FC = () => {
 	return (
 		<Header className="layout-header-fixed">
-			<div className="layout-logo-fixed">
+			<div style={{ display: "inline-block", padding: "0, 0, 0, 10px" }}>
 				<div className="layout-anchor">
 					<NavLink href="/">
 						<a className="header-text">Windy City Devs</a>
