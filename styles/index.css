@@ -151,24 +151,24 @@
 	align-items: center;
 	justify-content: center;
 }
-@media (min-width: 992px)
-.ant-col-lg-8 {
-    display: block;
-    /* flex: 0 0 33.33333333%; */
-    /* max-width: 33.33333333%; */
+@media (min-width: 992px) .ant-col-lg-8 {
+	display: block;
+	/* flex: 0 0 33.33333333%; */
+	/* max-width: 33.33333333%; */
 }
 .ant-col-xs-24 {
-    display: block;
-    flex: 0 0 100%;
-    /* max-width: 100%; */
+	display: block;
+	flex: 0 0 100%;
+	/* max-width: 100%; */
 }
 .ant-col {
-    position: relative;
-    max-width: 100%;
-    min-height: 1px;
+	position: relative;
+	max-width: 100%;
+	min-height: 1px;
 }
 
 .app-layout {
+	background-size: cover;
 	background: #000000; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to bottom,
@@ -181,7 +181,7 @@
 		#000000
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100%;
+	height: 100vh;
 }
 
 .ant-card-actions {
@@ -207,5 +207,5 @@
 	display: "inlibe-block";
 	text-align: "justify";
 	margin: 20px;
-	position: "absolute"
+	position: "relative";
 }
