@@ -10,6 +10,7 @@ import {
 	ContentDetails,
 	CoverImage,
 	FixedHeader,
+	FixedFooter,
 	Github,
 	Linkedin,
 	MetaDescription,
@@ -77,26 +78,17 @@ const Index: NextPage = () => {
 				<Head>
 					<title>SSR, Apollo, GraphQL, and Next.js</title>
 				</Head>
-				<Content className="user-card">
-					<div className="about-to-home-button">
-						<Button
-							className="index-button"
-							type="link"
-							size="large"
-							shape="round"
-						>
-							<Link href="/">
-								<a className="index-anchor">Technology</a>
-							</Link>{" "}
-						</Button>
-					</div>
-					<Divider />
-					<Row gutter={24} justify="space-between">
-						<Col xs={24} lg={24} flex="auto">
+				<>
+				<Row gutter={24} justify="space-between" className="index-row">
+					<Col xs={24} lg={8}>
+						<Content className="user-card">
+							<Divider />
 							{items}
-						</Col>
-					</Row>
-				</Content>
+						</Content>
+					</Col>
+				</Row>
+				</>
+				<FixedFooter />
 			</Layout>
 		);
 	}

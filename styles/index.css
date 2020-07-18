@@ -46,13 +46,6 @@
 .user-card {
 	padding-left: 20px;
 	padding-right: 20px;
-	display: inline;
-}
-
-.user-card-grid {
-	width: "33.33%";
-	text-align: justify;
-	margin: 20px;
 }
 
 .user-name-user-role {
@@ -110,6 +103,10 @@
 	width: 100vw;
 }
 
+.to-about-button {
+	padding-top: 100px;
+}
+
 .layout-logo-fixed {
 	/* background: rgba(255, 255, 255, 0.2) */
 	display: inline-block;
@@ -154,11 +151,24 @@
 	align-items: center;
 	justify-content: center;
 }
-
-
+@media (min-width: 992px)
+.ant-col-lg-8 {
+    display: block;
+    /* flex: 0 0 33.33333333%; */
+    /* max-width: 33.33333333%; */
+}
+.ant-col-xs-24 {
+    display: block;
+    flex: 0 0 100%;
+    /* max-width: 100%; */
+}
+.ant-col {
+    position: relative;
+    max-width: 100%;
+    min-height: 1px;
+}
 
 .app-layout {
-	position: relative;
 	background: #000000; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to bottom,
@@ -171,8 +181,13 @@
 		#000000
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 100vh;
 }
 
 .ant-card-actions {
 	background-color: #000000;
+}
+
+.index-row {
+	width: 100vw;
 }

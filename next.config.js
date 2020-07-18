@@ -54,7 +54,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer");
 
 module.exports = compose([
 	[
-
 		withBundleAnalyzer,
 		{
 			enabled: process.env.ANALYZE === "true"
@@ -62,8 +61,6 @@ module.exports = compose([
 	],
 	gql
 ]);
-
-
 
 // const withPlugins = require("next-compose-plugins");
 // const withBundleAnalyzer = require("@next/bundle-analyzer");

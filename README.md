@@ -1,5 +1,17 @@
 # wcd-apollo-gql 🐜🐜🐜BUILD🐜🐜🐜
 
+## Antd layout breakpoint width
+```css
+.breakpointWidth{
+  xs: '480px';
+  sm: '576px';
+  md: '768px';
+  lg: '992px';
+  xl: '1200px';
+  xxl: '1600px';
+}
+```
+
 ### SiteMap for enhanced SEO
 - https://priver.dev/posts/sitemap-with-next-js
 - https://dev.to/embiem/auto-generate-sitemapxml-in-nextjs-2nh1
