@@ -92,9 +92,11 @@ const Index = () => {
 			</Layout>
 		);
 	}
-	<div>
-		<ErrorBanner />
-	</div>;
+	return (
+		<div>
+			<ErrorBanner />
+		</div>
+	);
 };
 
 export default Index;
