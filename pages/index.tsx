@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { NextPage, GetStaticProps } from "next";
+import { NextPage, GetStaticProps, NextApiRequest } from "next";
 import Link from "next/link";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
@@ -22,8 +22,8 @@ import {
 const { Meta } = Card;
 const { Content } = Layout;
 
+const { data, loading, error } = useViewerQuery();
 const Index: NextPage = () => {
-	const { data, loading, error } = useViewerQuery();
 	if (data) {
 		const { viewers } = data!;
 		// console.log(viewers);
@@ -116,7 +116,8 @@ export async function getStaticProps({}: GetStaticProps) {
 
 	return {
 		props: {
-			initialApolloState: apolloClient.cache.extract()
+			initialApolloState: apolloClient.cache.extract(),
+			data
 		}
 	};
 }
