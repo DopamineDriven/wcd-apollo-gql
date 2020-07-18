@@ -33,6 +33,7 @@ const Index: NextPage = () => {
 			<Card
 				key={viewer.id}
 				hoverable={true}
+				className="index-card"
 				style={{
 					display: "inline-block",
 					textAlign: "justify",
@@ -66,16 +67,16 @@ const Index: NextPage = () => {
 				<Head>
 					<title>SSR, Apollo, GraphQL, and Next.js</title>
 				</Head>
-				<>
+				<div className="index-row-keeper">
 					<Row gutter={24} justify="space-between" className="index-row">
-						<Col xs={24} lg={8}>
+						<Col xs={24} lg={8} xl={6} style={{ alignContent: "center" }}>
 							<Content className="user-card">
 								<Divider />
 								{items}
 							</Content>
 						</Col>
 					</Row>
-				</>
+					</div>
 				<FixedFooter />
 			</Layout>
 		);

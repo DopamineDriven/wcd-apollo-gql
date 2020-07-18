@@ -8,6 +8,7 @@ export const FixedFooter: FC = () => {
 	const currentYear = new Date().getFullYear();
 	return (
 		<Footer
+            className="footer"
 			style={{
 				textAlign: "center",
 				alignContent: "center",

@@ -181,7 +181,7 @@
 		#000000
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100vh;
+	height: 100%;
 }
 
 .ant-card-actions {
@@ -189,5 +189,23 @@
 }
 
 .index-row {
-	width: 100vw;
+	width: 100%;
+	align-content: center;
+}
+
+.footer {
+	box-shadow: 4px rgba(29, 34, 108, 0.1);
+	font-size: larger;
+}
+
+.index-row-keeper {
+	padding-top: 10em;
+	height: 100vh;
+}
+
+.index-card {
+	display: "inlibe-block";
+	text-align: "justify";
+	margin: 20px;
+	position: "absolute"
 }
