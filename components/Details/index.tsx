@@ -10,7 +10,7 @@ type UProps = {
 export const UserDetails = ({ name, role }: UProps) => {
 	return (
 		<>
-			<Title level={4} className="user-details">
+			<Title level={4} style={{ marginBottom: "20px" }}>
 				<Text className="user-name-user-role">
 					{`${name}`}&nbsp;&nbsp;&nbsp;{`${role}`}
 				</Text>
@@ -29,7 +29,9 @@ export const ContentDetails = ({ content }: CProps) => {
 		<>
 			<Divider />
 			<Paragraph>
-				<Text className="user-content">{`${content}`}</Text>
+				<Text className="user-content">
+					<em>{`${content}`}</em>
+				</Text>
 			</Paragraph>
 		</>
 	);

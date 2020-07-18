@@ -3,8 +3,9 @@ import Head from "next/head";
 import { NextPage, GetStaticProps } from "next";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
-import { Card, Col, Divider, Layout, Row, Affix } from "antd";
+import { Card, Col, Divider, Layout, Row, Affix, List } from "antd";
 import { ErrorBanner } from "../utils";
+
 import {
 	ContentDetails,
 	CoverImage,
@@ -18,11 +19,12 @@ import {
 	OnLoad,
 	Twitter,
 	UserAvatar,
-	UserDetails
+	UserDetails,
 } from "../components";
 
 const { Meta } = Card;
 const { Content } = Layout;
+const { Item } = List;
 
 const Index: NextPage = () => {
 	const { data, loading, error } = useViewerQuery();

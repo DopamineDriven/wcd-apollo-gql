@@ -5,7 +5,7 @@ export * from "./FixedHeader";
 export * from "./Footer";
 export * from "./Github";
 export * from "./IndexConditionals";
-export * from "./LinkedIn";
+export * from "./CardActions/LinkedIn";
 export * from "./MetaData";
 export * from "./MetaDescription";
 export * from "./PageSkeleton";
