@@ -12,6 +12,7 @@ function SvgLogo({ props }: { props: string | number }) {
 			height="5em"
 			{...props}
 		>
+			<title>Windy City Logo</title>
 			<style>
 				{
 					".Logo_svg__st1,.Logo_svg__st3{fill:#41b6e6}.Logo_svg__st3{opacity:.52}.Logo_svg__st7{fill:#ed2124}.Logo_svg__st10{opacity:.29}"
