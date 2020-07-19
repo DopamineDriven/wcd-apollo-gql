@@ -67,8 +67,12 @@ const Index = () => {
 			<Layout className="app-layout">
 				<OnSuccess />
 				<div className="index-row-keeper">
-					<Divider />
-					<Row gutter={24} justify="space-between" className="index-row">
+					<Row
+						gutter={[48, 48]}
+						justify="space-between"
+						className="index-row"
+						align="middle"
+					>
 						<Col xs={24} lg={8} xl={6} style={{ alignContent: "center" }}>
 							<List
 								grid={{
@@ -86,7 +90,6 @@ const Index = () => {
 								)}
 							/>
 						</Col>
-						<Divider />
 						<FixedFooter />
 					</Row>
 				</div>
@@ -115,6 +118,5 @@ export async function getStaticProps({}: GetStaticProps) {
 		}
 	};
 }
-
 
 // https://ant.design/components/list/
