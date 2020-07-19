@@ -1,12 +1,12 @@
-const withReactSvg = require("next-react-svg");
-const path = require("path");
+// const withReactSvg = require("next-react-svg");
+// const path = require("path");
 
-const svg = withReactSvg({
-	include: path.resolve(__dirname, "src/svg"),
-	webpack(config, _options) {
-		return config;
-	}
-});
+// const svg = withReactSvg({
+// 	include: path.resolve(__dirname, "src/svg"),
+// 	webpack(config, _options) {
+// 		return config;
+// 	}
+// });
 
 const gql = {
 	webpack(config, options) {
@@ -69,8 +69,7 @@ module.exports = compose([
 			enabled: process.env.ANALYZE === "true"
 		}
 	],
-	gql,
-	svg
+	gql
 ]);
 
 // const withPlugins = require("next-compose-plugins");

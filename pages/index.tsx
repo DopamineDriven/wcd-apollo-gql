@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { GetStaticProps } from "next";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
@@ -66,6 +67,9 @@ const Index = () => {
 			<OnLoad />
 		) : (
 			<Layout className="app-layout">
+				<Head>
+					<title>Landing Page</title>
+				</Head>
 				<OnSuccess />
 				<div className="index-row-keeper">
 					<SubNavButton />
