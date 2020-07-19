@@ -14,7 +14,7 @@ const FixedHeader = ({ props }: Props) => {
 	return (
 		<Header className="layout-header-fixed">
 			<div style={{ display: "inline-block", padding: "0, 0, 0, 10px" }}>
-				<NavLink href="/">
+				<NavLink href="/index">
 					<a style={{ paddingLeft: "2em" }}>{<SvgLogo props={props} />}</a>
 				</NavLink>
 			</div>
