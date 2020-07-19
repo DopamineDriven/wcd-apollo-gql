@@ -1,5 +1,10 @@
 # wcd-apollo-gql 🐜🐜🐜BUILD🐜🐜🐜
 
+## generate JSX from .svg files via the command line
+```git
+$ npx @svgr/cli --icon Logo.svg
+```
+
 ## Antd layout breakpoint width
 ```css
 .breakpointWidth{
