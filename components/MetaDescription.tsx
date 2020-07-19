@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "antd";
 
-export const MetaDescription = () => {
+const MetaDescription = () => {
 	return (
 		<Button
 			style={{ float: "right" }}
@@ -15,3 +15,5 @@ export const MetaDescription = () => {
 		</Button>
 	);
 };
+
+export default MetaDescription;

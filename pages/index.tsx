@@ -5,23 +5,20 @@ import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
 import { Card, Col, Layout, Row, List } from "antd";
 import { ErrorBanner } from "../utils";
-
-import {
-	ContentDetails,
-	CoverImage,
-	Email,
-	FixedFooter,
-	Github,
-	Linkedin,
-	MetaDescription,
-	OnError,
-	OnLoad,
-	OnSuccess,
-	SubNavButton,
-	Twitter,
-	UserAvatar,
-	UserDetails
-} from "../components";
+import Email from "../components/EmailIcon";
+import Github from "../components/GithubIcon";
+import Linkedin from "../components/LinkedinIcon";
+import Twitter from "../components/TwitterIcon";
+import ContentDetails from "../components/ContentDetails";
+import CoverImage from "../components/CoverImage";
+import FixedFooter from "../components/Footer";
+import MetaDescription from "../components/MetaDescription";
+import OnError from "../components/OnError";
+import OnLoad from "../components/OnLoad";
+import OnSuccess from "../components/OnSuccess";
+import SubNavButton from "../components/SubNav";
+import UserAvatar from "../components/UserAvatar";
+import UserDetails from "../components/UserDetails";
 
 const { Meta } = Card;
 const { Content } = Layout;

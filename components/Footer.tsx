@@ -4,7 +4,7 @@ import { CopyrightCircleOutlined } from "@ant-design/icons";
 
 const { Footer } = Layout;
 
-export const FixedFooter: FC = () => {
+const FixedFooter: FC = () => {
 	const currentYear = new Date().getFullYear();
 	return (
 		<Footer
@@ -31,3 +31,5 @@ export const FixedFooter: FC = () => {
 		</Footer>
 	);
 };
+
+export default FixedFooter;

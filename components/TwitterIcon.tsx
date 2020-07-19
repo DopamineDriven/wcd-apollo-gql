@@ -5,7 +5,7 @@ type Props = {
 	twitter: string;
 };
 
-export const Twitter = ({ twitter }: Props) => {
+const Twitter = ({ twitter }: Props) => {
 	return (
 		<Button
 			href={`${twitter}`}
@@ -18,3 +18,5 @@ export const Twitter = ({ twitter }: Props) => {
 		/>
 	);
 };
+
+export default Twitter;

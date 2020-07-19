@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "../../lib/constants";
+import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
 
-export const MetaData = () => {
+const MetaData = () => {
 	return (
 		<Head>
 			<link
@@ -36,3 +36,5 @@ export const MetaData = () => {
 		</Head>
 	);
 };
+
+export default MetaData;

@@ -6,7 +6,7 @@ type Props = {
 	alt: string;
 };
 
-export const UserAvatar = ({ src, alt }: Props) => {
+const UserAvatar = ({ src, alt }: Props) => {
 	return (
 		<Avatar
 			src={`${src}`}
@@ -18,3 +18,5 @@ export const UserAvatar = ({ src, alt }: Props) => {
 		/>
 	);
 };
+
+export default UserAvatar;

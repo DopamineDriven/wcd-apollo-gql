@@ -8,7 +8,7 @@ type Props = {
 	email: string;
 };
 
-export const Email = ({ email }: Props) => {
+const Email = ({ email }: Props) => {
 	return (
 		<Button
 			href={`${email}`}
@@ -19,3 +19,5 @@ export const Email = ({ email }: Props) => {
 		/>
 	);
 };
+
+export default Email;

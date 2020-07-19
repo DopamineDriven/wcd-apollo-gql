@@ -5,7 +5,7 @@ type Props = {
 	linkedin: string;
 };
 
-export const Linkedin = ({ linkedin }: Props) => {
+const Linkedin = ({ linkedin }: Props) => {
 	return (
 		<Button
 			href={`${linkedin}`}
@@ -18,3 +18,5 @@ export const Linkedin = ({ linkedin }: Props) => {
 		/>
 	);
 };
+
+export default Linkedin;

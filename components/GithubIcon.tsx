@@ -5,7 +5,7 @@ type Props = {
 	github: string;
 };
 
-export const Github = ({ github }: Props) => {
+const Github = ({ github }: Props) => {
 	return (
 		<Button
 			href={`${github}`}
@@ -16,3 +16,5 @@ export const Github = ({ github }: Props) => {
 		/>
 	);
 };
+
+export default Github;

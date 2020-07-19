@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 // import { LogoHeader } from "../Style";
 import NavLink from "next/link";
-import SvgLogo from "../Svg/index";
+import SvgLogo from "./Svg";
 
 interface Props {
 	props: string | number;
@@ -10,7 +10,7 @@ interface Props {
 
 const { Header } = Layout;
 //Content destructured by Layout if needed
-export const FixedHeader = ({ props }: Props) => {
+const FixedHeader = ({ props }: Props) => {
 	return (
 		<Header className="layout-header-fixed">
 			<div style={{ display: "inline-block", padding: "0, 0, 0, 10px" }}>
@@ -21,3 +21,5 @@ export const FixedHeader = ({ props }: Props) => {
 		</Header>
 	);
 };
+
+export default FixedHeader;

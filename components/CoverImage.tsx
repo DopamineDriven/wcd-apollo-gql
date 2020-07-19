@@ -3,7 +3,7 @@ type Props = {
 	alt: string;
 };
 
-export const CoverImage = ({ alt, src }: Props) => {
+const CoverImage = ({ alt, src }: Props) => {
 	return (
 		<img
 			src={`${src}`}
@@ -12,3 +12,5 @@ export const CoverImage = ({ alt, src }: Props) => {
 		/>
 	);
 };
+
+export default CoverImage;

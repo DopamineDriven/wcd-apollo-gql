@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Row, Col, Button } from "antd";
 
-export const SubNavButton = () => {
+const SubNavButton = () => {
 	return (
 		<Row
 			gutter={[48, 48]}
@@ -37,3 +37,5 @@ export const SubNavButton = () => {
 		</Row>
 	);
 };
+
+export default SubNavButton;

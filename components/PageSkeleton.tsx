@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from "react";
 import { Skeleton } from "antd";
 
-export const PageSkeleton: FC = () => {
+const PageSkeleton: FC = () => {
 	const skeletonParagraph = (
 		<Skeleton
 			active
@@ -18,3 +18,5 @@ export const PageSkeleton: FC = () => {
 		</Fragment>
 	);
 };
+
+export default PageSkeleton;
