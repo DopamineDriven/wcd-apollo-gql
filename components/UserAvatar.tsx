@@ -8,14 +8,16 @@ type Props = {
 
 const UserAvatar = ({ src, alt }: Props) => {
 	return (
-		<Avatar
-			src={`${src}`}
-			size={200}
-			icon={UserOutlined}
-			shape="circle"
-			alt={`${alt}`}
-			style={{ textAlign: "center", verticalAlign: "center" }}
-		/>
+		<div style={{ display: "flex", alignItems: "center" }}>
+			<Avatar
+				src={src}
+				size={150}
+				icon={UserOutlined}
+				shape="circle"
+				alt={alt}
+				style={{ textAlign: "center", verticalAlign: "center" }}
+			/>
+		</div>
 	);
 };
 
