@@ -5,10 +5,64 @@ const MetaData = () => {
 	return (
 		<Head>
 			<link
-				rel="apple-touch-icon"
+				rel="apple-icon-57x57"
+				type="img/png"
+				sizes="57x57"
+				href="/favicon/apple-icon-57x57.png"
+			/>
+			<link
+				rel="apple-icon-60x60"
+				type="img/png"
+				sizes="60x60"
+				href="/favicon/apple-icon-60x60.png"
+			/>
+			<link
+				rel="apple-icon-72x72"
+				type="img/png"
+				sizes="72x72"
+				href="/favicon/apple-icon-72x72.png"
+			/>
+			<link
+				rel="apple-icon-76x76"
+				type="img/png"
+				sizes="76x76"
+				href="/favicon/apple-icon-76x76.png"
+			/>
+			<link
+				rel="apple-icon-114x114"
+				type="img/png"
+				sizes="114x114"
+				href="/favicon/apple-icon-114x114.png"
+			/>
+			<link
+				rel="apple-icon-120x120"
+				type="img/png"
+				sizes="120x120"
+				href="/favicon/apple-icon-120x120.png"
+			/>
+			<link
+				rel="apple-icon-144x144"
+				type="img/png"
+				sizes="144x144"
+				href="/favicon/apple-icon-144x144.png"
+			/>
+			<link
+				rel="apple-icon-152x152"
+				type="img/png"
+				sizes="152x152"
+				href="/favicon/apple-icon-152x152.png"
+			/>
+			<link
+				rel="apple-icon-180x180"
 				type="img/png"
 				sizes="180x180"
-				href="/favicon/apple-touch-icon.png"
+				href="/favicon/apple-icon-180x180.png"
+			/>
+			<link
+				rel="apple-icon-precomposed"
+				type="img/png"
+				sizes="192x192"
+				href="/favicon/apple-icon-precomposed.png"
 			/>
 			<link rel="manifest" href="/favicon/site.webmanifest" />
 			<link
