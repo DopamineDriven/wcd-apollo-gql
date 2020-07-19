@@ -1,7 +1,7 @@
 {
 "name": "wcd-apollo-gql",
 "short_name": "wcd",
-"start_url": "https://wcd-ssg-antd.dopaminedriven.vercel.app/",
+"start_url": "https://wcd-apollo-gql.dopaminedriven.vercel.app/",
  "icons": [
   {
    "src": "/favicon/android-icon-36x36.png",
