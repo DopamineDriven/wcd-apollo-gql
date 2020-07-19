@@ -65,7 +65,7 @@ const Index = () => {
 		) : (
 			<Layout className="app-layout">
 				<Head>
-					<title>Landing Page</title>
+					<title>Windy City Devs</title>
 				</Head>
 				<OnSuccess />
 				<div className="index-row-keeper">
