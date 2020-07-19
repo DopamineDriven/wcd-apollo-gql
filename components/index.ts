@@ -9,4 +9,5 @@ export * from "./CardActions/LinkedIn";
 export * from "./MetaDescription";
 export * from "./PageSkeleton";
 export * from "./CardActions/Twitter";
+export * from "./SubNav";
 export * from "./UserAvatar";

@@ -3,6 +3,7 @@ import { ErrorBanner } from "../../utils";
 import { PageSkeleton } from "../PageSkeleton";
 import { FixedHeader } from "../FixedHeader";
 import { MetaData } from "../MetaData";
+import { SubNavButton } from "../SubNav";
 
 const { Content } = Layout;
 
@@ -41,6 +42,7 @@ export const OnSuccess: any = () => {
 				<FixedHeader />
 			</Affix>
 			<MetaData />
+			<SubNavButton />
 		</>
 	);
 };

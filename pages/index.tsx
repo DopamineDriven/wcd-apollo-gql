@@ -2,7 +2,7 @@ import React from "react";
 import { GetStaticProps } from "next";
 import { initializeApollo } from "../lib/apollo";
 import { useViewerQuery, ViewerDocument } from "../lib/viewer.graphql";
-import { Card, Col, Divider, Layout, Row, List } from "antd";
+import { Card, Col, Layout, Row, List } from "antd";
 import { ErrorBanner } from "../utils";
 
 import {
@@ -69,11 +69,19 @@ const Index = () => {
 				<div className="index-row-keeper">
 					<Row
 						gutter={[48, 48]}
-						justify="space-between"
+						justify="center"
 						className="index-row"
 						align="middle"
 					>
-						<Col xs={24} lg={8} xl={6} style={{ alignContent: "center" }}>
+						<Col
+							span={8}
+							xs={24}
+							sm={12}
+							md={8}
+							lg={6}
+							xl={4}
+							style={{ alignContent: "center" }}
+						>
 							<List
 								grid={{
 									gutter: 8,

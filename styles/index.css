@@ -26,6 +26,15 @@
 	box-shadow: 0 2px 8px #f0f1f2;
 }
 
+.sub-nav-button {
+	color: #ffffff;
+	background-color: #000000;
+	border: 1px #ffffff solid;
+	width: 100px !important;
+	font-size: large;
+	box-shadow: 0 2px 8px #f0f1f2;
+}
+
 .user-social-media-button {
 	background: #000000;
 	outline: #ffffff .5px solid;
