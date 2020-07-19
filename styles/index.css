@@ -35,6 +35,21 @@
 	box-shadow: 0 2px 8px #f0f1f2;
 }
 
+.sub-nav-button:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border: 1px #000000 solid;
+	width: 100px !important;
+	font-size: large;
+	box-shadow: 0 2px 8px #f0f1f2;
+	font-weight: bold;
+}
+
+.sub-nav-row {
+	align-content: center;
+	padding-left: 6em;
+}
+
 .user-social-media-button {
 	background: #000000;
 	outline: #ffffff .5px solid;

@@ -3,20 +3,26 @@ import { Row, Col, Button } from "antd";
 
 export const SubNavButton = () => {
 	return (
-		<Row gutter={[48, 48]} align="middle" justify="center">
-			<Col span={12}>
+		<Row
+			gutter={[48, 48]}
+			align="middle"
+			justify="center"
+			className="sub-nav-row"
+		>
+			<Col lg={{ span: 9, offset: 3 }}>
 				<Button
 					style={{ alignSelf: "center" }}
 					size="large"
 					type="link"
 					className="sub-nav-button"
+					// disabled={true}
 				>
-					<Link href="/contact">
+					<Link href="/">
 						<a>Contact</a>
 					</Link>
 				</Button>
 			</Col>
-			<Col span={12}>
+			<Col lg={{ span: 9, offset: 3 }}>
 				<Button
 					style={{ alignSelf: "center" }}
 					size="large"

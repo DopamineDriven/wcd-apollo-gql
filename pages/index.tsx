@@ -16,6 +16,7 @@ import {
 	OnError,
 	OnLoad,
 	OnSuccess,
+	SubNavButton,
 	Twitter,
 	UserAvatar,
 	UserDetails
@@ -67,6 +68,7 @@ const Index = () => {
 			<Layout className="app-layout">
 				<OnSuccess />
 				<div className="index-row-keeper">
+					<SubNavButton />
 					<Row
 						gutter={[48, 48]}
 						justify="center"
