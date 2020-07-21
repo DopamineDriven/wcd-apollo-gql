@@ -36,11 +36,6 @@ const Index = () => {
 				key={viewer.id}
 				hoverable={true}
 				className="index-card"
-				style={{
-					display: "inline-block",
-					textAlign: "justify",
-					margin: "20px"
-				}}
 				cover={<CoverImage src={viewer.coverphoto} alt={viewer.name} />}
 				actions={[
 					<Github github={viewer.github} />,

@@ -1,9 +1,9 @@
 .ant-layout-header {
-    height: 74px;
-    padding: 0 50px;
-    color: rgba(0, 0, 0, 0.65);
-    line-height: 64px;
-    background: #001529;
+	height: 74px;
+	padding: 0 50px;
+	color: rgba(0, 0, 0, 0.65);
+	line-height: 64px;
+	background: #001529;
 }
 
 .user-card {
@@ -58,7 +58,7 @@
 
 .user-social-media-button {
 	background: #000000;
-	outline: #ffffff .5px solid;
+	outline: #ffffff 0.5px solid;
 }
 
 .user-social-media-button:hover {
@@ -91,10 +91,12 @@
 	width: 100%;
 }
 
-@media (min-width: 992px) .ant-col-lg-8 {
-	display: block;
-	/* flex: 0 0 33.33333333%; */
-	/* max-width: 33.33333333%; */
+@media (min-width: 992px) {
+	.ant-col-lg-8 {
+		display: block;
+		/* flex: 0 0 33.33333333%; */
+		/* max-width: 33.33333333%; */
+	}
 }
 .ant-col-xs-24 {
 	display: block;
@@ -159,7 +161,7 @@ html {
 }
 
 .index-card {
-	display: "inline-block";
+	display: "inlibe-block";
 	text-align: "justify";
 	margin: 20px;
 	position: "relative";
