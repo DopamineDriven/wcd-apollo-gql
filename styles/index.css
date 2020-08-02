@@ -151,7 +151,7 @@ html {
 }
 
 .footer {
-	box-shadow: 4px rgba(29, 34, 108, 0.1);
+	box-shadow: 4px 0 0 4px rgba(29, 34, 108, 0.1);
 	font-size: larger;
 }
 
