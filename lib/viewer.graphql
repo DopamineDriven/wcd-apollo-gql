@@ -1,15 +1,49 @@
 query Viewer {
-    viewers {
-        id
-        name
-        role
-        email
-        image
-        content
-        github
-        twitter
-        linkedin
-        coverphoto
-        birthday
-    }
+	viewers {
+		id
+		name
+		role
+		email
+		image
+		content
+		github
+		twitter
+		linkedin
+		coverphoto
+		birthday
+	}
 }
+
+# query AllPosts {
+# 	posts(first: 35, where: { orderby: { field: DATE, order: ASC } }) {
+# 		edges {
+# 			node {
+# 				title
+# 				excerpt
+# 				slug
+# 				date
+# 				modified
+# 				social {
+# 					facebook
+# 					instagram
+# 					twitter
+# 				}
+# 				featuredImage {
+# 					node {
+# 						sourceUrl
+# 					}
+# 				}
+# 				author {
+# 					node {
+# 						name
+# 						firstName
+# 						lastName
+# 						avatar {
+# 							url
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }

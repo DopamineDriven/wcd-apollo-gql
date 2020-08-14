@@ -14,6 +14,10 @@ type User {
 	birthday: String!
 }
 
+type Post {
+
+}
+
 type Query {
 	viewers: [User!]!
 }
